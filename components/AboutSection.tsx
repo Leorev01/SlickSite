@@ -33,7 +33,7 @@ export default function AboutSection() {
         <div className="text-center">
           <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Who We Are</h2>
           <p className="mt-8 text-lg text-gray-300 sm:text-xl max-w-3xl mx-auto">
-            At SlickSites, we bring a fresh approach to web design, crafting visually stunning websites
+            At SlickSite, we bring a fresh approach to web design, crafting visually stunning websites
             that drive results. In just 2 years, we&apos;ve helped numerous businesses transform their online
             presence with custom, high-converting web solutions. Our mission is to combine creativity with strategy,
             delivering a website that truly sets your brand apart.
