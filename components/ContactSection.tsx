@@ -26,13 +26,14 @@ const ContactCTASection = () => {
     setSubmitMessage('Submitting...');
   
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+        const response = await fetch('https://slick-site.com/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+          
   
       if (response.ok) {
         setSubmitMessage('Your message has been sent! We will get back to you soon.');
