@@ -6,6 +6,7 @@ const ContactCTASection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
   });
 
@@ -50,6 +51,7 @@ const ContactCTASection = () => {
       setFormData({
         name: '',
         email: '',
+        phone: '',
         message: '',
       });
     }
@@ -97,6 +99,20 @@ const ContactCTASection = () => {
               aria-required="true"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus-visible:outline-none"
               placeholder="Enter your email"
+            />
+          </div>
+
+          {/* Phone Input */}
+          <div>
+            <label htmlFor="phone" className="block text-sm font-semibold mb-2">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"  
+              value={formData.phone}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus-visible:outline-none"
+              placeholder="Enter your phone number"
             />
           </div>
 

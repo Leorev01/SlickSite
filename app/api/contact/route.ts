@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Parse the incoming request JSON data
-    const { name, email, message } = await req.json();
+    const { name, email, phone, message } = await req.json();
 
     // Log received data for debugging
     console.log('Received data:', { name, email, message });
@@ -44,11 +44,12 @@ export async function POST(req: NextRequest) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       replyTo: email,
-      to: 'revrennaleo@gmail.com',
+      to: 'leo@swift-site.com',
       subject: `New contact message from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Message:</strong> ${message}</p>
       `,
     };
