@@ -26,7 +26,7 @@ const ContactCTASection = () => {
     setSubmitMessage('Submitting...');
   
     try {
-        const response = await fetch('https://slick-site.com/api/contact', {
+        const response = await fetch('https://www.slick-site.com//api/contact', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
