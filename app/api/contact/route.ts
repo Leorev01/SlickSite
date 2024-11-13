@@ -1,12 +1,5 @@
-import Cors from 'cors';
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-
-// Initialize CORS
-const cors = Cors({
-  methods: ['GET', 'POST', 'HEAD'],
-  origin: '*', // You may want to replace '*' with your actual frontend domain
-});
 
 export async function POST(req: NextRequest) {
   // Add CORS headers
