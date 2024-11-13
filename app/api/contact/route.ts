@@ -2,7 +2,21 @@ import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(req: NextRequest) {
+  // Add CORS headers
+  const responseHeaders = new Headers();
+  responseHeaders.append('Access-Control-Allow-Origin', '*'); // Allow all origins (or specify your frontend URL if needed)
+  responseHeaders.append('Access-Control-Allow-Methods', 'POST');
+  responseHeaders.append('Access-Control-Allow-Headers', 'Content-Type');
+
   try {
+    // Check if it's a preflight request (OPTIONS)
+    if (req.method === 'OPTIONS') {
+      return new NextResponse(null, {
+        status: 200,
+        headers: responseHeaders,
+      });
+    }
+
     // Parse the incoming request JSON data
     const { name, email, message } = await req.json();
 
@@ -11,9 +25,9 @@ export async function POST(req: NextRequest) {
 
     // Validate input fields
     if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: 'All fields are required' },
-        { status: 400 }
+      return new NextResponse(
+        JSON.stringify({ error: 'All fields are required' }),
+        { status: 400, headers: responseHeaders }
       );
     }
 
@@ -30,7 +44,7 @@ export async function POST(req: NextRequest) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       replyTo: email,
-      to: 'revrennaleo@gmail.com', // Your recipient email address
+      to: 'revrennaleo@gmail.com',
       subject: `New contact message from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>
@@ -43,26 +57,17 @@ export async function POST(req: NextRequest) {
     await transporter.sendMail(mailOptions);
 
     // Return a successful response
-    return NextResponse.json(
-      { message: 'Your message has been sent!' },
-      { status: 200 }
+    return new NextResponse(
+      JSON.stringify({ message: 'Your message has been sent!' }),
+      { status: 200, headers: responseHeaders }
     );
 
   } catch (error) {
     console.error('Error sending email:', error);
 
-    // Handle known errors gracefully
-    if (error instanceof Error && error.message.includes('invalid email')) {
-      return NextResponse.json(
-        { error: 'Invalid email address provided' },
-        { status: 400 }
-      );
-    }
-
-    // Catch-all error response
-    return NextResponse.json(
-      { error: 'There was an error sending your message' },
-      { status: 500 }
+    return new NextResponse(
+      JSON.stringify({ error: 'There was an error sending your message' }),
+      { status: 500, headers: responseHeaders }
     );
   }
 }
