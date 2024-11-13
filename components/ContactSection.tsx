@@ -57,7 +57,7 @@ const ContactCTASection = () => {
   
 
   return (
-    <section className="bg-gradient-to-r from-blue-500 to-teal-500 py-16 text-white">
+    <section id='contact' className="bg-gradient-to-r from-blue-500 to-teal-500 py-16 text-white">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-semibold mb-6">Let&apos;s Work Together!</h2>
         <p className="text-lg mb-8">We would love to help you bring your vision to life. Get in touch with us today for a free consultation!</p>
