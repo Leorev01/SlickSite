@@ -1,5 +1,6 @@
-'use client';
+'use client'
 import { useState } from 'react';
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -29,11 +30,11 @@ export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    setCurrentIndex((prevIndex: number) => (prevIndex + 1) % testimonials.length);
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex((prevIndex: number) => (prevIndex - 1 + testimonials.length) % testimonials.length);
   };
 
   const { name, position, quote, image } = testimonials[currentIndex];
@@ -44,7 +45,7 @@ export default function TestimonialsSection() {
         <h2 className="text-3xl font-semibold text-gray-800 mb-8">What Our Clients Say</h2>
         <div className="max-w-2xl mx-auto bg-white shadow-xl rounded-lg p-6">
           <div className="flex items-center mb-4">
-            <img src={image} alt={name} className="w-16 h-16 rounded-full object-cover mr-4" />
+            <Image src={image} alt={name} className="w-16 h-16 rounded-full object-cover mr-4" />
             <div>
               <p className="text-xl font-semibold text-gray-800">{name}</p>
               <p className="text-gray-500">{position}</p>
