@@ -1,32 +1,38 @@
-import React, { useEffect } from 'react';
+import Link from 'next/link';
+import { useEffect } from 'react';
 
-export default function Home() {
+const TrustPilot = () => {
   useEffect(() => {
-    // Dynamically load the Trustpilot script when the component mounts
+    // Dynamically load Trustpilot widget script
     const script = document.createElement('script');
-    script.src = "//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js";
+    script.src = 'https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js';
     script.async = true;
     script.onload = () => {
-      console.log("Trustpilot Widget loaded");
+      console.log('Trustpilot widget script loaded');
     };
+
     document.body.appendChild(script);
 
+    // Cleanup the script when the component unmounts
     return () => {
-      document.body.removeChild(script); // Clean up on unmount
+      document.body.removeChild(script);
     };
-  }, []); // Empty dependency array to run only once
+  }, []);
 
   return (
-    <div>
-
-      {/* Trustpilot Widget */}
-      <div className="trustpilot-widget mt-8" data-locale="en-GB" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6734fb019ecd53e30da492bb" data-style-height="52px" data-style-width="100%">
-        <a href="https://uk.trustpilot.com/review/slick-site.com" target="_blank" rel="noopener">
-          Trustpilot
-        </a>
-      </div>
-
-      {/* End Trustpilot Widget */}
+    <div
+      className="trustpilot-widget mt-8"
+      data-locale="en-GB"
+      data-template-id="56278e9abfbbba0bdcd568bc" // Template ID
+      data-businessunit-id="6734fb019ecd53e30da492bb" // Business unit ID
+      data-style-height="52px"
+      data-style-width="100%"
+    >
+      <Link href="https://uk.trustpilot.com/review/slick-site.com" target="_blank" rel="noopener">
+        Trustpilot
+      </Link>
     </div>
   );
-}
+};
+
+export default TrustPilot;

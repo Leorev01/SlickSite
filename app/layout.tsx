@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Script from "next/script"; // Import Script from Next.js for optimized script loading
 
 // Load local fonts
 const geistSans = localFont({
@@ -25,7 +26,6 @@ export const metadata: Metadata = {
     description:
       "Transform your ideas into stunning websites with SlickSite. Offering web design, branding, and digital solutions for businesses.",
     url: "https://www.slick-site.com",
-    //image: "/path-to-image.jpg", // Add your image path here for social sharing
     type: "website",
   },
   twitter: {
@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     title: "SlickSite – Professional Web Design Services",
     description:
       "Transform your ideas into stunning websites with SlickSite. Offering web design, branding, and digital solutions for businesses.",
-    //image: "/path-to-image.jpg", // Add your image path here for social sharing
   },
   robots: {
     index: true,
@@ -50,15 +49,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Trustpilot Widget Script */}
-        <script
-          type="text/javascript"
+        <Script
           src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
-          async
-        ></script>
+          strategy="afterInteractive" // Ensures the script loads after the page is interactive
+        />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
