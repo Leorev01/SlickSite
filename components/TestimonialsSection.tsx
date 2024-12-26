@@ -1,29 +1,21 @@
 'use client'
 import { useState } from 'react';
-import Image from 'next/image';
-import TrustPilot from './TrustPilot';
 
 const testimonials = [
   {
     id: 1,
-    name: 'John Doe',
-    position: 'CEO, TechCorp',
+    name: 'Shane Dowey',
     quote: 'This agency completely transformed our website! Our conversions have skyrocketed.',
-    image: 'https://via.placeholder.com/80',
   },
   {
     id: 2,
-    name: 'Jane Smith',
-    position: 'Marketing Director, StartupX',
+    name: 'Alawi Simba',
     quote: 'Incredible design team! They understood our needs and delivered ahead of schedule.',
-    image: 'https://via.placeholder.com/80',
   },
   {
     id: 3,
-    name: 'Michael Lee',
-    position: 'Founder, CreativeLab',
+    name: 'Tishaun Williams',
     quote: 'We love our new site! The results are amazing, and the process was seamless.',
-    image: 'https://via.placeholder.com/80',
   },
 ];
 
@@ -38,7 +30,7 @@ export default function TestimonialsSection() {
     setCurrentIndex((prevIndex: number) => (prevIndex - 1 + testimonials.length) % testimonials.length);
   };
 
-  const { name, position, quote, image } = testimonials[currentIndex];
+  const { name, quote } = testimonials[currentIndex];
 
   return (
     <div className="bg-gray-100 py-16">
@@ -46,10 +38,8 @@ export default function TestimonialsSection() {
         <h2 className="text-3xl font-semibold text-gray-800 mb-8">What Our Clients Say</h2>
         <div className="max-w-2xl mx-auto bg-white shadow-xl rounded-lg p-6">
           <div className="flex items-center mb-4">
-            <Image width={80} height={80} src={image} alt={name} className="w-16 h-16 rounded-full object-cover mr-4" />
             <div>
               <p className="text-xl font-semibold text-gray-800">{name}</p>
-              <p className="text-gray-500">{position}</p>
             </div>
           </div>
           <p className="text-lg text-gray-700 italic">&quot;{quote}&quot;</p>
@@ -68,7 +58,6 @@ export default function TestimonialsSection() {
             </button>
           </div>
         </div>
-        <TrustPilot />
       </div>
     </div>
   );
