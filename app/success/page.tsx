@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const SuccessPage: React.FC = () => {
+const SuccessPage = () => {
 
   return (
     <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg mt-12 text-center">
