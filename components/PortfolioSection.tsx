@@ -32,7 +32,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="py-10 bg-gray-50" id="projects">
+    <div className="py-10 bg-gray-50" id="portfolio">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold mb-4">Our Work</h2>
       </div>
