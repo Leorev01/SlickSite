@@ -59,7 +59,7 @@ const SecondSection = () => {
       <div className="flex flex-col items-start w-full mt-8 px-4 md:px-10">
         <h3 className="text-3xl text-center w-full">What we deliver:</h3>
         {stats.map((stat, index) => (
-          <h2 className="text-lg mt-2" key={index}>
+          <h2 className="text-lg mt-2 font-semibold" key={index}>
             ✅ {stat}
           </h2>
         ))}

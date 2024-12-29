@@ -36,7 +36,7 @@ const OpeningSection = () => {
             className="absolute top-0 left-0 w-full h-full object-cover"
             controls
           >
-            <source src="/video.mp4" type="video/mp4" />
+            <source src="/videos/landing.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -47,7 +47,7 @@ const OpeningSection = () => {
         <p className="text-xl italic mt-5">Get Started In 30 Seconds</p>
         <SalesButton />
         <div className="h-1 w-[80vw] bg-[#EF233C] mt-5"></div>
-        <p className="my-5 text-2xl">(Offer ends <strong>January 7th</strong>)</p>
+        <p className="my-5 text-2xl">(Offer ends <strong>January 10th</strong>)</p>
       </div>
     </div>
   );
