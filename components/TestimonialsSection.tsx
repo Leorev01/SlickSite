@@ -4,17 +4,17 @@ import { useState } from 'react';
 const testimonials = [
   {
     id: 1,
-    name: 'Shane Dowey',
+    name: 'C Smith',
     quote: 'This agency completely transformed our website! Our conversions have skyrocketed.',
   },
   {
     id: 2,
-    name: 'Alawi Simba',
+    name: 'S Johnson',
     quote: 'Incredible design team! They understood our needs and delivered ahead of schedule.',
   },
   {
     id: 3,
-    name: 'Tishaun Williams',
+    name: 'A Thompson',
     quote: 'We love our new site! The results are amazing, and the process was seamless.',
   },
 ];
