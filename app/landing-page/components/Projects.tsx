@@ -30,7 +30,7 @@ const projects = [
   },
   {
     id: 6,
-    imageUrl: "/images/projects/photography.png", // Replace with actual image URLs
+    imageUrl: "/images/projects/photographer.png", // Replace with actual image URLs
     height: 500,
   }
 ]
