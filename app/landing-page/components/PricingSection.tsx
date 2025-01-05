@@ -11,36 +11,48 @@ interface PricingTier {
 const pricingData: PricingTier[] = [
   {
     title: "Starter",
-    description: "Ideal for small businesses or personal websites.",
-    price: "£499",
+    description: "Perfect for small home improvement businesses just starting out.",
+    price: "£599",
     now: "£399",
     features: [
-      "Up to 5 pages",
-      "Responsive design",
-      "SEO optimized",
-      "Basic contact form"
+      "Up to 5 custom pages",
+      "Mobile-friendly design",
+      "Basic SEO setup",
+      "Contact form integration",
+      "Google My Business integration",
+      "Ongoing maintenance"
     ],
   },
   {
     title: "Growth",
-    description: "Perfect for growing businesses looking to scale.",
-    price: "£999",
+    description: "Ideal for established home improvement companies looking to grow.",
+    price: "£1,299",
     now: "£799",
     features: [
-      "Up to 10 pages",
-      "E-commerce integration",
-      "Advanced SEO",
-      "Analytics integration",
-      "Blog setup"
+      "Up to 15 custom pages",
+      "Gallery or portfolio showcase",
+      "Advanced SEO optimization",
+      "Blog setup",
+      "Testimonial and review pages",
+      "Analytics and tracking integration",
+      "Ongoing maintenance"
     ],
   },
   {
     title: "Custom",
-    description: "Tailored to your unique needs. We’ll build something special for you.",
+    description: "Tailored solutions for larger home improvement businesses.",
     price: "",
     now: "Contact us",
-    features: ["Fully custom design", "Custom features", "Dedicated support"],
-  }
+    features: [
+      "Unlimited custom pages",
+      "Interactive project showcase",
+      "Custom lead generation forms",
+      "Appointment scheduling tool",
+      "Live chat integration",
+      "Dedicated account manager",
+      "Ongoing maintenance and support"
+    ],
+  },
 ];
 
 const PricingComponent = () => {
@@ -48,8 +60,11 @@ const PricingComponent = () => {
     <section className="py-16 bg-[#EDF2F4] dark:bg-gray-800 mb-8">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-semibold text-gray-800 dark:text-white mb-8">
-          Our Pricing Plans
+          Web Design Services for Home Improvement Businesses
         </h2>
+        <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+          Build a professional online presence with our tailored website solutions.
+        </p>
         <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 pb-8">
           {pricingData.map((tier, index) => (
             <div
@@ -64,7 +79,9 @@ const PricingComponent = () => {
               </p>
               <div className="flex flex-row gap-2 justify-center font-bold mb-4">
                 <p className="text-blue-600 text-3xl">{tier.now}</p>
-                <p className="text-red-600 line-through text-lg">{tier.price}</p>
+                {tier.price && (
+                  <p className="text-red-600 line-through text-lg">{tier.price}</p>
+                )}
               </div>
               <ul className="space-y-2 mb-6">
                 {tier.features.map((feature, idx) => (
@@ -73,10 +90,12 @@ const PricingComponent = () => {
                   </li>
                 ))}
               </ul>
+              {tier.now !== "Contact us" && (
+                <SalesButton />
+              )}
             </div>
           ))}
         </div>
-        <SalesButton />
       </div>
     </section>
   );
