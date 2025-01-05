@@ -5,13 +5,13 @@ import { motion } from 'framer-motion'
 const projects = [
   {
     id: 1,
-    imageUrl: "/images/projects/plasterer.png", // Replace with actual image URLs
-    height: 400, // Image height
+    imageUrl: "/images/projects/sjdroofing.png", // Replace with actual image URLs
+    height: 350, // Image height
   },
   {
     id: 2,
-    imageUrl: "/images/projects/sjdroofing.png", // Replace with actual image URLs
-    height: 350,
+    imageUrl: "/images/projects/plasterer.png", // Replace with actual image URLs
+    height: 400,
   },
   {
     id: 3,
@@ -28,6 +28,11 @@ const projects = [
     imageUrl: "/images/projects/webdev.png", // Replace with actual image URLs
     height: 400,
   },
+  {
+    id: 6,
+    imageUrl: "/images/projects/photography.png", // Replace with actual image URLs
+    height: 500,
+  }
 ]
 
 const Projects = () => {
