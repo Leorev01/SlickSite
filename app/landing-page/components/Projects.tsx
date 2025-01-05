@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const projects = [
   {
     id: 1,
-    imageUrl: "/images/projects/photographer.png", // Replace with actual image URLs
+    imageUrl: "/images/projects/plasterer.png", // Replace with actual image URLs
     height: 400, // Image height
   },
   {
