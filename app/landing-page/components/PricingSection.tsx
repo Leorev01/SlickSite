@@ -90,12 +90,10 @@ const PricingComponent = () => {
                   </li>
                 ))}
               </ul>
-              {tier.now !== "Contact us" && (
-                <SalesButton />
-              )}
             </div>
           ))}
         </div>
+        <SalesButton />
       </div>
     </section>
   );
