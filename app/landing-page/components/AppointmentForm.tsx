@@ -1,13 +1,4 @@
-'use client';
-
-// Extend the Window interface to include fbq
-declare global {
-  interface Window {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    fbq?: (...args: any[]) => void;
-  }
-}
-
+'use client'
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
@@ -32,9 +23,6 @@ const AppointmentForm: React.FC = () => {
 
   const today = new Date().toISOString().split('T')[0];
 
-  // Get the Meta Pixel ID from environment variables
-  const pixelId = process.env.FACEBOOK_PIXEL_ID;
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -51,18 +39,6 @@ const AppointmentForm: React.FC = () => {
 
       if (response.ok) {
         setSuccess(true);  // Show success message
-
-        // Trigger the Meta Pixel Lead event after successful form submission
-        if (typeof window !== "undefined" && window.fbq && pixelId) {
-          window.fbq('track', 'Lead', {
-            name,
-            email,
-            phone,
-            message,
-            date,
-            time
-          });
-        }
       } else {
         setError("Something went wrong. Please try again.");
       }
