@@ -37,6 +37,7 @@ export default function LandingPageLayout({
                 fbq('track', 'ViewContent'); // Add the ViewContent event here
               `}
             </Script>
+            
 
             {/* ViewContent Event Code (for content pages like landing pages) */}
             <Script
