@@ -73,15 +73,20 @@ const Home = () => {
           >
             Custom web development tailored to the home improvement industry—boost your online presence and grow your business.
           </motion.p>
-          <motion.a
-            href="#contact"
+          <motion.button
+            onClick={() => {
+              const element = document.getElementById("contact");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
             variants={fadeIn}
             initial="hidden"
             animate="visible"
-            className="mt-16 px-8 py-4 bg-white text-blue-600 font-semibold rounded-full shadow-lg hover:shadow-xl hover:bg-gray-100 transition"
+            className="mt-8 px-8 py-4 bg-white text-blue-600 font-semibold rounded-full shadow-lg hover:shadow-xl hover:bg-gray-100 transition"
           >
             Get Your Free Website Audit Today!
-          </motion.a>
+          </motion.button>
         </div>
       </section>
 
@@ -392,7 +397,7 @@ const Home = () => {
         </section>
 
       {/* Contact Section with Calendar */}
-      <section id='contact' className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20 px-6">
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20 px-6">
         <div className="container mx-auto text-center">
           <motion.h2
             variants={fadeIn}
@@ -412,7 +417,7 @@ const Home = () => {
           </motion.p>
         </div>
       </section>
-      <section className="py-16 px-6 bg-gray-50">
+      <section id='contact' className="py-16 px-6 bg-gray-50">
         <AppointmentForm />
       </section>
     </div>
