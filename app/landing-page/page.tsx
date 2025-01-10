@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import "react-calendar/dist/Calendar.css";
 import AppointmentForm from "./components/AppointmentForm";
+import Image from 'next/image';
 
 const Home = () => {
 
@@ -266,8 +267,7 @@ const Home = () => {
                 overflow: 'hidden',
               }}
             >
-              {/* Image */}
-              <img
+              <Image
                 src={project.imageUrl}
                 alt={`Project ${project.id}`}
                 className="w-full h-full object-cover"
@@ -275,6 +275,7 @@ const Home = () => {
                 style={{
                   objectPosition: 'top', // Ensure we only show the top of the image
                 }}
+                layout="fill"
               />
 
               {/* Hover Description */}
