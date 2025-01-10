@@ -73,14 +73,15 @@ const Home = () => {
           >
             Custom web development tailored to the home improvement industry—boost your online presence and grow your business.
           </motion.p>
-          <motion.button
+          <motion.a
+            href="#contact"
             variants={fadeIn}
             initial="hidden"
             animate="visible"
             className="mt-8 px-8 py-4 bg-white text-blue-600 font-semibold rounded-full shadow-lg hover:shadow-xl hover:bg-gray-100 transition"
           >
             Get Your Free Website Audit Today!
-          </motion.button>
+          </motion.a>
         </div>
       </section>
 
@@ -391,7 +392,7 @@ const Home = () => {
         </section>
 
       {/* Contact Section with Calendar */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20 px-6">
+      <section id='contact' className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20 px-6">
         <div className="container mx-auto text-center">
           <motion.h2
             variants={fadeIn}
