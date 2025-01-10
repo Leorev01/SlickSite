@@ -78,7 +78,7 @@ const Home = () => {
             variants={fadeIn}
             initial="hidden"
             animate="visible"
-            className="mt-8 px-8 py-4 bg-white text-blue-600 font-semibold rounded-full shadow-lg hover:shadow-xl hover:bg-gray-100 transition"
+            className="mt-16 px-8 py-4 bg-white text-blue-600 font-semibold rounded-full shadow-lg hover:shadow-xl hover:bg-gray-100 transition"
           >
             Get Your Free Website Audit Today!
           </motion.a>
