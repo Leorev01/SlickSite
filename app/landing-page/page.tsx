@@ -63,7 +63,7 @@ const Home = () => {
             animate="visible"
             className="text-4xl md:text-5xl font-extrabold leading-tight"
           >
-            Transform Your Home Improvement Website Into a Lead-Generating Machine!
+            Your Website Is Costing You Customers—Fix It Before They Go Elsewhere!
           </motion.h1>
           <motion.p
             variants={fadeIn}
@@ -71,7 +71,7 @@ const Home = () => {
             animate="visible"
             className="mt-6 text-lg md:text-xl"
           >
-            Custom web development tailored to the home improvement industry—boost your online presence and grow your business.
+            A poorly designed website could be driving your customers straight to your competition. Let&apos;s fix that.
           </motion.p>
           <motion.button
             onClick={() => {
@@ -103,13 +103,13 @@ const Home = () => {
             variants={fadeIn}
             className="text-3xl md:text-4xl font-bold text-gray-800"
             >
-            Is Your Website Costing You Customers?
+            Is Your Website Failing to Bring in Business?
             </motion.h2>
             <motion.p
             variants={fadeIn}
             className="mt-4 text-lg text-gray-600"
             >
-            We understand the struggles of a poorly performing website. Here’s what might be holding you back:
+            A website that doesn’t perform means lost opportunities and revenue. Here’s what might be holding you back.
             </motion.p>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -252,7 +252,7 @@ const Home = () => {
             animate="visible"
             className="text-4xl font-bold mb-4"
           >
-            Our Work
+            Our Recent Work
           </motion.h2>
         </div>
 
@@ -337,8 +337,8 @@ const Home = () => {
       {/* Pricing Section */}
       <section className="py-16 px-6 bg-white">
         <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold">Our Pricing</h2>
-            <p className="mt-4 text-lg text-gray-600">Affordable solutions tailored to your business needs.</p>
+            <h2 className="text-3xl md:text-4xl font-bold">Affordable Solutions for Every Business</h2>
+            <p className="mt-4 text-lg text-gray-600">Choose the perfect plan that fits your business needs and budget. Get started today!</p>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
                 {
