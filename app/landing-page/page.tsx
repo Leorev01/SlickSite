@@ -164,6 +164,12 @@ const Home = () => {
             </motion.p>
             <motion.div variants={fadeIn} className="mt-10 flex justify-center">
             <motion.button
+                onClick={() => {
+                const element = document.getElementById("contact");
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                }
+                }}
                 className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition"
                 whileHover={{ scale: 1.05 }}
             >
