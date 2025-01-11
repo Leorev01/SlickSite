@@ -8,42 +8,51 @@ const AppointmentForm: React.FC = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
+  const [website, setWebsite] = useState<string>(""); // Optional
   const [message, setMessage] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<boolean>(false);
+  const [errors, setErrors] = useState<{ [key: string]: string }>({}); // Error state
 
   const phonePattern = /^(?:\+44|0)7\d{9}$/;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const isFormValid =
-    name &&
-    emailPattern.test(email) &&
-    phonePattern.test(phone) &&
-    message &&
-    date &&
-    time;
 
   const today = new Date().toISOString().split("T")[0];
 
+  const validateForm = () => {
+    const newErrors: { [key: string]: string } = {};
+
+    if (!name.trim()) newErrors.name = "Full name is required.";
+    if (!emailPattern.test(email)) newErrors.email = "Invalid email address.";
+    if (!phonePattern.test(phone)) newErrors.phone = "Invalid phone number.";
+    if (!date) newErrors.date = "Please select a date.";
+    if (!time) newErrors.time = "Please select a time.";
+    if (!message.trim()) newErrors.message = "Message is required.";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Return true if no errors
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setError(null);
 
+    if (!validateForm()) return; // Stop submission if validation fails
+
+    setIsSubmitting(true);
     try {
       const response = await fetch("/api/appointments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, message, date, time }),
+        body: JSON.stringify({ name, email, phone, website, message, date, time }),
       });
 
       if (response.ok) {
         setSuccess(true);
       } else {
-        setError("Something went wrong. Please try again.");
+        setErrors({ form: "Something went wrong. Please try again." });
       }
     } catch {
-      setError("Something went wrong. Please try again.");
+      setErrors({ form: "Something went wrong. Please try again." });
     } finally {
       setIsSubmitting(false);
     }
@@ -57,13 +66,13 @@ const AppointmentForm: React.FC = () => {
 
   return (
     <div className="max-w-2xl mx-auto bg-white dark:bg-gray-900 p-8 rounded-xl shadow-xl">
-      {error && (
+      {errors.form && (
         <div
           role="alert"
           aria-live="assertive"
           className="bg-red-100 text-red-800 p-4 rounded-lg mb-6 text-center"
         >
-          {error}
+          {errors.form}
         </div>
       )}
       {success && (
@@ -88,10 +97,10 @@ const AppointmentForm: React.FC = () => {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              required
               className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your full name"
             />
+            {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -106,11 +115,10 @@ const AppointmentForm: React.FC = () => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                required
-                pattern={emailPattern.source}
                 className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your email"
               />
+              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
             </div>
             <div>
               <label
@@ -124,12 +132,27 @@ const AppointmentForm: React.FC = () => {
                 id="phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                required
-                pattern={phonePattern.source}
                 className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your phone number"
               />
+              {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
             </div>
+          </div>
+          <div>
+            <label
+              htmlFor="website"
+              className="block text-sm font-medium text-gray-600 dark:text-gray-300"
+            >
+              Current Website (Optional)
+            </label>
+            <input
+              type="text"
+              id="website"
+              value={website}
+              onChange={(e) => setWebsite(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
+              placeholder="https://example.com"
+            />
           </div>
           <div>
             <label
@@ -142,11 +165,11 @@ const AppointmentForm: React.FC = () => {
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              required
               rows={5}
               className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
-              placeholder="Tell us about your project..."
+              placeholder="Tell us about your project or goals..."
             />
+            {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -161,10 +184,10 @@ const AppointmentForm: React.FC = () => {
                 id="date"
                 value={date || ""}
                 onChange={(e) => setDate(e.target.value)}
-                required
                 min={today}
                 className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
               />
+              {errors.date && <p className="text-red-500 text-sm">{errors.date}</p>}
             </div>
             <div>
               <label
@@ -177,7 +200,6 @@ const AppointmentForm: React.FC = () => {
                 id="time"
                 value={time}
                 onChange={(e) => setTime(e.target.value)}
-                required
                 className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
               >
                 <option value="">Select a time</option>
@@ -198,12 +220,13 @@ const AppointmentForm: React.FC = () => {
                   </option>
                 ))}
               </select>
+              {errors.time && <p className="text-red-500 text-sm">{errors.time}</p>}
             </div>
           </div>
         </div>
         <button
           type="submit"
-          disabled={isSubmitting || !isFormValid}
+          disabled={isSubmitting}
           className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg focus:ring-2 focus:ring-blue-500 transition"
         >
           {isSubmitting ? "Submitting..." : "Book Appointment"}

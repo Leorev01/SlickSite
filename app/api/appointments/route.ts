@@ -9,6 +9,7 @@ interface AppointmentRequest {
   email: string;
   phone: string;
   message: string;
+  website: string;
   date: string;
   time: string;
 }
@@ -22,7 +23,7 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function POST(req: NextRequest) {
-  const { name, email, phone, message, date, time }: AppointmentRequest = await req.json();
+  const { name, email, phone, website, message, date, time }: AppointmentRequest = await req.json();
 
   // Email to admin
   const adminMailOptions = {
@@ -35,6 +36,7 @@ export async function POST(req: NextRequest) {
       Name: ${name}
       Email: ${email}
       Phone: ${phone}
+      Website: ${website || 'No website provided'}
       Date: ${date}
       Time: ${time}
       Message: ${message || 'No message provided'}
