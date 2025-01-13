@@ -35,9 +35,9 @@ const Navbar = () => {
           <Link href="/articles" className="hover:text-gray-300">
             Articles
           </Link>
-          <button className='bg-white text-blue-950 px-4 py-2 rounded-lg font-bold hover:bg-gray-200'>
+          <Link href="/quote" className='bg-white text-blue-950 px-4 py-2 rounded-lg font-bold hover:bg-gray-200'>
             Free Quote
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
