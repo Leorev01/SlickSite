@@ -1,30 +1,26 @@
-// HeroSection.tsx
-import Link from "next/link";
+import Image from 'next/image';
+import conversionImage from '@/public/images/conversion.png';
 
 export default function HeroSection() {
   return (
-    <div className="relative bg-gradient-to-tr from-blue-600 to-purple-700 text-white py-32">
-      <div className="container mx-auto px-6 flex flex-col items-center">
+    <div className="relative pt-36 flex md:flex-row flex-col mx-10">
+      <div className="container mx-auto px-6 flex flex-col justify-center text-blue-950">
         <h1 className="text-5xl font-bold mb-6">
-          Transform Your Ideas into Stunning Websites
+        Boost Your Service-Based Business with High-Converting Websites
         </h1>
-        <p className="text-lg max-w-2xl text-center mb-8">
-          Web design, branding, and digital solutions for businesses that want to grow.
+        <p className="text-lg max-w-2xl text-start mb-8">
+        We transform your online presence to drive more leads and inquiries, delivering high-quality sales appointments that help grow your service-based business.
         </p>
         <div className="flex space-x-4">
-          <Link
-            href="mailto:leo@slick-site.com"
-            className="bg-white text-blue-600 px-6 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition"
+          <button
+            className="px-9 py-3 rounded-full text-xl bg-blue-950 text-white font-bold"
           >
-            Schedule a FREE Consultation
-          </Link>
-          <Link
-            href="#portfolio" // Updated href to scroll to the portfolio section
-            className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition"
-          >
-            View Our Portfolio
-          </Link>
+            FREE QUOTE
+          </button>
         </div>
+      </div>
+      <div>
+        <Image src={conversionImage} alt="Conversion Image"  width={800} height={800}/>
       </div>
     </div>
   );

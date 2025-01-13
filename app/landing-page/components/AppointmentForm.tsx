@@ -7,15 +7,15 @@ const AppointmentForm: React.FC = () => {
   const [time, setTime] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [phone, setPhone] = useState<string>("");
+  const [phone, setPhone] = useState<string>(""); // Optional
   const [website, setWebsite] = useState<string>(""); // Optional
   const [message, setMessage] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   const [errors, setErrors] = useState<{ [key: string]: string }>({}); // Error state
 
-  const phonePattern = /^(?:\+44|0)7\d{9}$/;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phonePattern = /^(?:\+44|0)7\d{9}$/;
 
   const today = new Date().toISOString().split("T")[0];
 
@@ -24,7 +24,7 @@ const AppointmentForm: React.FC = () => {
 
     if (!name.trim()) newErrors.name = "Full name is required.";
     if (!emailPattern.test(email)) newErrors.email = "Invalid email address.";
-    if (!phonePattern.test(phone)) newErrors.phone = "Invalid phone number.";
+    if (phone && !phonePattern.test(phone)) newErrors.phone = "Invalid phone number."; // Phone is optional
     if (!date) newErrors.date = "Please select a date.";
     if (!time) newErrors.time = "Please select a time.";
     if (!message.trim()) newErrors.message = "Message is required.";
@@ -125,7 +125,7 @@ const AppointmentForm: React.FC = () => {
                 htmlFor="phone"
                 className="block text-sm font-medium text-gray-600 dark:text-gray-300"
               >
-                Phone Number
+                Phone Number (Optional)
               </label>
               <input
                 type="tel"
@@ -203,20 +203,9 @@ const AppointmentForm: React.FC = () => {
                 className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
               >
                 <option value="">Select a time</option>
-                {[
-                  "9:00 AM",
-                  "10:00 AM",
-                  "11:00 AM",
-                  "12:00 PM",
-                  "1:00 PM",
-                  "2:00 PM",
-                  "3:00 PM",
-                  "4:00 PM",
-                  "5:00 PM",
-                  "6:00 PM",
-                ].map((t) => (
-                  <option key={t} value={t}>
-                    {t}
+                {[...Array(9)].map((_, i) => (
+                  <option key={i} value={`${i + 9}:00 AM`}>
+                    {i + 9}:00 AM
                   </option>
                 ))}
               </select>
