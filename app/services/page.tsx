@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import CTA from '@/components/CTA'
+import { LinkSlashIcon } from '@heroicons/react/16/solid';
 
 export default function ServicesPage() {
   return (
@@ -19,9 +20,9 @@ export default function ServicesPage() {
         {/* First Row of 3 Service Sections */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Web Design Section */}
-          <div className="relative bg-white rounded-lg overflow-hidden shadow-lg">
+          <Link href="/services/web-design" className="relative bg-blue-900 rounded-lg overflow-hidden shadow-lg text-white hover:text-blue-500">
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-center">
-              <h4 className="text-2xl font-semibold text-white z-10">Web Design</h4>
+              <h4 className="text-2xl font-semibold z-10">Web Design</h4>
             </div>
             <Image
               src="/images/services/spwebdesign.png" 
@@ -30,12 +31,12 @@ export default function ServicesPage() {
               width={100}
               height={100}
             />
-          </div>
+          </Link>
 
           {/* Web Development Section */}
-          <div className="relative bg-white rounded-lg overflow-hidden shadow-lg">
+          <Link href='/services/web-development' className="relative bg-blue-900 rounded-lg overflow-hidden shadow-lg text-white hover:text-blue-500">
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-center">
-              <h4 className="text-2xl font-semibold text-white z-10">Web Development</h4>
+              <h4 className="text-2xl font-semibold z-10">Web Development</h4>
             </div>
             <Image 
               src="/images/services/spwebdev.png" 
@@ -44,12 +45,12 @@ export default function ServicesPage() {
               width={100}
               height={100}
             />
-          </div>
+          </Link>
 
           {/* Digital Marketing Section */}
-          <div className="relative bg-white rounded-lg overflow-hidden shadow-lg">
+          <Link href='/services/digital-marketing' className="relative bg-blue-900 rounded-lg overflow-hidden shadow-lg text-white hover:text-blue-500">
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-center">
-              <h4 className="text-2xl font-semibold text-white z-10">Digital Marketing</h4>
+              <h4 className="text-2xl font-semibold z-10">Digital Marketing</h4>
             </div>
             <Image 
               src="/images/services/spseo.png" 
@@ -58,7 +59,7 @@ export default function ServicesPage() {
               width={100}
               height={100}
             />
-          </div>
+          </Link>
         </div>
 
         {/* General Description Section */}
@@ -75,41 +76,50 @@ export default function ServicesPage() {
         </div>
 
         {/* Second Row of 3 Service Sections (identical to the first) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Web Design Section */}
-          <div className="relative bg-white rounded-lg overflow-hidden shadow-lg">
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-center">
-              <h4 className="text-2xl font-semibold text-white z-10">Web Design</h4>
-            </div>
-            <img 
-              src="/images/services/web-design.jpg" 
+          <div className="text-center">
+            <Image 
+              src="/images/services/spwebdesign.png" 
               alt="Web Design"
-              className="w-full h-32 object-cover"
+              className="mx-auto"
+              width={400}
+              height={150}
             />
+            <h4 className="text-2xl font-semibold text-black mt-4">Web Design</h4>
+            <Link href="/services/web-design" className="text-blue-600 hover:underline mt-2 block">
+            Find out more 🡢
+            </Link>
           </div>
 
           {/* Web Development Section */}
-          <div className="relative bg-white rounded-lg overflow-hidden shadow-lg">
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-center">
-              <h4 className="text-2xl font-semibold text-white z-10">Web Development</h4>
-            </div>
-            <img 
-              src="/images/services/web-development.jpg" 
+          <div className="text-center">
+            <Image 
+              src="/images/services/spwebdev.png" 
               alt="Web Development"
-              className="w-full h-32 object-cover"
+              className="mx-auto"
+              width={400}
+              height={150}
             />
+            <h4 className="text-2xl font-semibold text-black mt-4">Web Development</h4>
+            <Link href="/services/web-development" className="text-blue-600 hover:underline mt-2 block">
+            Find out more 🡢
+            </Link>
           </div>
 
           {/* Digital Marketing Section */}
-          <div className="relative bg-white rounded-lg overflow-hidden shadow-lg">
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-center">
-              <h4 className="text-2xl font-semibold text-white z-10">Digital Marketing</h4>
-            </div>
-            <img 
-              src="/images/services/digital-marketing.jpg" 
+          <div className="text-center">
+            <Image 
+              src="/images/services/spseo.png" 
               alt="Digital Marketing"
-              className="w-full h-32 object-cover"
+              className="mx-auto"
+              width={400}
+              height={150}
             />
+            <h4 className="text-2xl font-semibold text-black mt-4">Digital Marketing</h4>
+            <Link href="/services/digital-marketing" className="text-blue-600 hover:underline mt-2 block">
+            Find out more 🡢
+            </Link>
           </div>
         </div>
         <CTA />
