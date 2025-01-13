@@ -45,9 +45,9 @@ const AboutPage = () => {
             {/* About Section */}
             <div>
               <h2 className="text-3xl font-bold text-blue-950 mb-4">About Slick Site</h2>
-              <p className='text-lg text-blue-950'>"Hi, I’m Leo, the founder of Slick Site. I launched Slick Site while studying Computer Science at University, and since then, I’ve had the privilege of creating websites for a diverse range of satisfied clients. These projects have spanned various industries, from photographer portfolios to roofing companies.
+              <p className='text-lg text-blue-950'>&quot;Hi, I’m Leo, the founder of Slick Site. I launched Slick Site while studying Computer Science at University, and since then, I’ve had the privilege of creating websites for a diverse range of satisfied clients. These projects have spanned various industries, from photographer portfolios to roofing companies.
                 <br/><br/>
-                At Slick Site, my goal is to craft tailor-made websites that perfectly align with my clients' needs—delivering exceptional quality at a fraction of the cost of large agencies. While I may be relatively young, I bring over four years of web development experience to the table, and I’m confident in the expertise I’ve gained along the way."
+                At Slick Site, my goal is to craft tailor-made websites that perfectly align with my clients&apos; needs—delivering exceptional quality at a fraction of the cost of large agencies. While I may be relatively young, I bring over four years of web development experience to the table, and I’m confident in the expertise I’ve gained along the way.&quot;
                 <br/><br/>
                 Leo Revrenna</p>
             </div>

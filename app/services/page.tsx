@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import CTA from '@/components/CTA'
-import { LinkSlashIcon } from '@heroicons/react/16/solid';
 
 export default function ServicesPage() {
   return (
@@ -13,7 +12,7 @@ export default function ServicesPage() {
           <h2 className="text-4xl font-bold text-blue-950 mb-4">What We Offer</h2>
           <h3 className="text-5xl font-semibold text-blue-950 mb-6">Our Services</h3>
           <p className="text-lg text-gray-600 mx-auto">
-            Here at Snapi, we offer a range of custom web development solutions to meet your unique needs. Whether you’re looking for a complete website redesign, a new e-commerce platform, or an SEO redesign, we can help bring your vision to life.
+            Here at Snapi, we offer a range of custom web development solutions to meet your unique needs. Whether you&apos;re looking for a complete website redesign, a new e-commerce platform, or an SEO redesign, we can help bring your vision to life.
           </p>
         </div>
 
@@ -65,13 +64,13 @@ export default function ServicesPage() {
         {/* General Description Section */}
         <div className="mb-16">
           <p className="text-lg text-gray-600 mx-auto">
-          Alongside our web development services, we also specialize in search engine optimization (SEO) to enhance your website's visibility and drive more traffic. Our SEO strategies are customized to align with your business objectives, including keyword research, on-page optimization, link building, and more.
+          Alongside our web development services, we also specialize in search engine optimization (SEO) to enhance your website&apos;s visibility and drive more traffic. Our SEO strategies are customized to align with your business objectives, including keyword research, on-page optimization, link building, and more.
           <br/><br/>
           Additionally, we provide content creation services designed to position your brand as an industry leader. From high-quality blog posts to informative articles, we craft content that engages your audience and boosts website traffic.
           <br/><br/>
           We also offer reliable web hosting solutions to ensure your website operates seamlessly. Our hosting plans are flexible and tailored to meet your specific needs, with features like regular backups, security updates, and 24/7 technical support.
           <br/><br/>
-          At Snapi, we're dedicated to delivering exceptional results and outstanding customer service. Get in touch with us today to learn how we can elevate your online presence.
+          At Snapi, we&apos;re dedicated to delivering exceptional results and outstanding customer service. Get in touch with us today to learn how we can elevate your online presence.
           </p>
         </div>
 
