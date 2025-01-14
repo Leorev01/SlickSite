@@ -39,7 +39,7 @@ const DesignServices = () => {
               <Link href="/work" className="text-blue-600 hover:underline">
                 Web Design Portfolio
               </Link> 
-              to see how we've brought clients' visions to life through innovative designs.
+              to see how we&apos;ve brought clients&apos; visions to life through innovative designs.
             </p>
           </Link>
 
@@ -63,7 +63,7 @@ const DesignServices = () => {
               <Link href="/portfolio/graphic-design" className="text-blue-600 hover:underline">
                 Graphic Design Portfolio
               </Link> 
-              to discover how we've helped businesses stand out with impactful designs.
+              to discover how we&apos;ve helped businesses stand out with impactful designs.
             </p>
           </Link>
         </div>
