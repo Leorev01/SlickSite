@@ -3,33 +3,32 @@ import Image from "next/image";
 import Link from "next/link";
 import CTA from "@/components/CTA";
 
-const LandingPageServices = () => {
+const WebDevelopmentServices = () => {
   return (
     <section className="bg-gray-50 py-16">
       <div className="container mx-auto px-6 mt-20">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-16">
           <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-2xl text-blue-950 mb-2">Landing Pages</h2>
+            <h2 className="text-2xl text-blue-950 mb-2">Web Development</h2>
             <h3 className="text-5xl font-bold text-blue-950 mb-4">
-              High-Converting Landing Page Development
+              Bespoke Web Development Services
             </h3>
             <p className="text-lg text-gray-600">
-              At Slick, we specialize in creating high-converting landing pages designed to drive results. 
-              Whether you&apos;re launching a product, promoting a service, or gathering leads, our landing pages 
-              are built to capture attention, engage visitors, and maximize conversions.
+              At Slick, we know that every business is unique. That&apos;s why we 
+              provide bespoke web development services tailored to your specific needs. 
+              Whether you&apos;re revamping your existing website, launching a new 
+              e-commerce platform, or creating a portfolio page, we bring your 
+              vision to life with modern, responsive, and optimized designs.
             </p>
-            <Link
-              href="/quote"
-              className="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700"
-            >
+            <Link href="/quote" className="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700">
               Get a Free Quote Today
             </Link>
           </div>
           <div className="md:w-1/2 mt-8 md:mt-0">
             <Image
-              src="/images/services/landing-page.svg"
-              alt="Landing Page Services"
+              src="/images/services/web-dev.svg"
+              alt="Web Development Services"
               className="rounded-lg shadow-lg"
               width={600}
               height={400}
@@ -37,53 +36,74 @@ const LandingPageServices = () => {
           </div>
         </div>
 
-        {/* Landing Page Development Section */}
+        {/* Bespoke Web Development Section */}
         <div className="mb-16">
           <h4 className="text-3xl font-bold text-blue-950 mb-4">
-            Tailored Landing Page Development
+            Bespoke Web Development
           </h4>
           <p className="text-lg text-gray-600 mb-4">
-            We create landing pages that are visually appealing, fast, and optimized for conversions. 
-            Our team works with you to understand your goals and audience, ensuring that every element 
-            of the landing page is designed to deliver results, whether that&apos;s generating leads or increasing sales.
+            A tailored approach to web development ensures that your website 
+            meets the unique demands of your business. At Slick, we focus on 
+            creating responsive, secure, and user-friendly websites that align 
+            with your brand identity and drive business objectives.
           </p>
           <p className="text-lg text-gray-600">
-            We specialize in building mobile-responsive, SEO-friendly, and user-focused landing pages that 
-            are tailored to meet your marketing objectives and create a seamless user experience.
+            From improving functionality to delivering SEO-optimized solutions, 
+            our bespoke services are designed to provide a seamless and 
+            engaging user experience.
           </p>
         </div>
 
-        {/* Example Project Section */}
-        <div className="mb-16 text-center">
-          <h4 className="text-3xl font-bold text-blue-950 mb-4">Example Project</h4>
+        {/* Example Projects Section */}
+        <div className="mb-16">
+          <h4 className="text-3xl font-bold text-blue-950 mb-4">Example Projects</h4>
           <p className="text-lg text-gray-600 mb-8">
-            Check out one of our successful landing page projects that helped our client achieve their business goals.
+            Explore some of the projects we&apos;ve completed to see how we&apos;ve helped 
+            businesses succeed online.
           </p>
-          <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
-            <Image
-              src="/images/projects/photographer.png"
-              alt="Product Launch Landing Page"
-              className="rounded-lg"
-              objectFit="cover"
-              objectPosition="top"
-              width={400}
-              height={250}
-              style={{ maxHeight: "250px", objectFit: "cover" }}
-            />
-            <h5 className="text-xl font-bold text-blue-950 mt-4">Photographer Landing Page</h5>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Project 1 */}
+          <div className="bg-white rounded-lg shadow-lg p-4">
+            <div className="relative w-full h-[250px]">
+              <Image
+                src="/images/projects/sjdroofing.png"
+                alt="SJD Roofing"
+                className="rounded-lg"
+                objectFit="cover"
+                objectPosition="top"
+                layout="fill" // Ensures image fills the container
+              />
+            </div>
+            <h5 className="text-xl font-bold text-blue-950 mt-4">SJD Roofing</h5>
             <p className="text-gray-600 mt-2">
-              A landing page designed for a professional photographer to showcase their portfolio and book sessions.
+              Built a responsive website for a UK-based company specializing in roofing and exterior cleaning.
+            </p>
+          </div>
+
+          {/* Project 2 */}
+          <div className="bg-white rounded-lg shadow-lg p-4">
+            <div className="relative w-full h-[250px]">
+              <Image
+                src="/images/projects/plasterer.png"
+                alt="Plasterer Website"
+                className="rounded-lg"
+                objectFit="cover"
+                objectPosition="top"
+                layout="fill" // Ensures image fills the container
+              />
+            </div>
+            <h5 className="text-xl font-bold text-blue-950 mt-4">Plasterer Website</h5>
+            <p className="text-gray-600 mt-2">
+              Developed a sleek website for a plasterer, showcasing their professional skills, services and portfolio.
             </p>
           </div>
         </div>
 
-
+        </div>
 
         {/* Our Process Section */}
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h4 className="text-4xl font-bold text-blue-950 mb-6 text-center">
-            Our Process
-          </h4>
+          <h4 className="text-4xl font-bold text-blue-950 mb-6 text-center">Our Process</h4>
           <div className="flex flex-col space-y-8">
             {/* Step 1 */}
             <div className="flex items-center">
@@ -92,11 +112,9 @@ const LandingPageServices = () => {
                   <i className="fas fa-user-plus text-xl"></i> {/* Onboarding Icon */}
                 </div>
                 <div className="ml-4">
-                  <h5 className="text-2xl font-bold text-blue-950">
-                    Step 1: Onboarding
-                  </h5>
+                  <h5 className="text-2xl font-bold text-blue-950">Step 1: Onboarding</h5>
                   <p className="text-gray-600 mt-2">
-                    Share your goals and requirements to kickstart your landing page project.
+                    Fill out our onboarding form and share your resources to get started.
                   </p>
                 </div>
               </div>
@@ -112,11 +130,9 @@ const LandingPageServices = () => {
                   <i className="fas fa-pencil-ruler text-xl"></i> {/* Design Icon */}
                 </div>
                 <div className="ml-4">
-                  <h5 className="text-2xl font-bold text-blue-950">
-                    Step 2: Design
-                  </h5>
+                  <h5 className="text-2xl font-bold text-blue-950">Step 2: Design</h5>
                   <p className="text-gray-600 mt-2">
-                    We design a visually stunning and functional layout that resonates with your target audience.
+                    Our team creates a custom design based on your business needs and vision.
                   </p>
                 </div>
               </div>
@@ -132,11 +148,9 @@ const LandingPageServices = () => {
                   <i className="fas fa-code text-xl"></i> {/* Development Icon */}
                 </div>
                 <div className="ml-4">
-                  <h5 className="text-2xl font-bold text-blue-950">
-                    Step 3: Development
-                  </h5>
+                  <h5 className="text-2xl font-bold text-blue-950">Step 3: Development</h5>
                   <p className="text-gray-600 mt-2">
-                    We develop your landing page with fast load times, optimized code, and a smooth user experience.
+                    We bring your ideas to life, developing a fully functional website.
                   </p>
                 </div>
               </div>
@@ -149,14 +163,12 @@ const LandingPageServices = () => {
             <div className="flex items-center">
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex justify-center items-center">
-                  <i className="fas fa-search text-xl"></i> {/* SEO Icon */}
+                  <i className="fas fa-search text-xl"></i> {/* SEO Strategy Icon */}
                 </div>
                 <div className="ml-4">
-                  <h5 className="text-2xl font-bold text-blue-950">
-                    Step 4: Optimization
-                  </h5>
+                  <h5 className="text-2xl font-bold text-blue-950">Step 4: SEO Strategy</h5>
                   <p className="text-gray-600 mt-2">
-                    We optimize your landing page for search engines and ensure it performs well on all devices.
+                    Discuss and implement a tailored SEO strategy to optimize your website.
                   </p>
                 </div>
               </div>
@@ -172,11 +184,9 @@ const LandingPageServices = () => {
                   <i className="fas fa-rocket text-xl"></i> {/* Launch Icon */}
                 </div>
                 <div className="ml-4">
-                  <h5 className="text-2xl font-bold text-blue-950">
-                    Step 5: Launch
-                  </h5>
+                  <h5 className="text-2xl font-bold text-blue-950">Step 5: Launch</h5>
                   <p className="text-gray-600 mt-2">
-                    We launch your landing page and track its performance to ensure maximum conversion.
+                    We handle everything to ensure your new website goes live smoothly.
                   </p>
                 </div>
               </div>
@@ -190,4 +200,4 @@ const LandingPageServices = () => {
   );
 };
 
-export default LandingPageServices;
+export default WebDevelopmentServices;

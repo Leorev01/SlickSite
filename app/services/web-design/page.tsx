@@ -20,7 +20,7 @@ const DesignServices = () => {
         {/* Design Services Sections */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           {/* Web Design */}
-          <Link href='/' className="flex flex-col items-center hover:mt-[-1rem] transform duration-300">
+          <Link href='/' className="flex flex-col items-center hover:mt-[-1rem] hover:mb-[1rem] transform duration-300">
             <Image
               src={webImage}
               alt="Custom Web Design"
@@ -35,16 +35,14 @@ const DesignServices = () => {
               for all devices. We focus on crafting modern, conversion-driven designs tailored to your unique brand identity.
             </p>
             <p className="text-lg text-gray-600 mt-4">
-              Explore our 
-              <Link href="/work" className="text-blue-600 hover:underline">
+              Explore our <Link href="/work" className="text-blue-600 hover:underline">
                 Web Design Portfolio
-              </Link> 
-              to see how we&apos;ve brought clients&apos; visions to life through innovative designs.
+              </Link> to see how we&apos;ve brought clients&apos; visions to life through innovative designs.
             </p>
           </Link>
 
           {/* Graphic Design */}
-          <Link href='/services/graphic-design' className="flex flex-col items-center hover:mt-[-1rem] transform duration-300">
+          <Link href='/services/graphic-design' className="flex flex-col items-center hover:mt-[-1rem] hover:mb-[1rem] transform duration-300">
             <Image
               src={graphicImage}
               alt="Custom Graphic Design"
@@ -59,11 +57,9 @@ const DesignServices = () => {
               professional, and resonates with your target audience.
             </p>
             <p className="text-lg text-gray-600 mt-4">
-              Check out our
-              <Link href="/portfolio/graphic-design" className="text-blue-600 hover:underline">
+              Check out our <Link href="/portfolio/graphic-design" className="text-blue-600 hover:underline">
                 Graphic Design Portfolio
-              </Link> 
-              to discover how we&apos;ve helped businesses stand out with impactful designs.
+              </Link> to discover how we&apos;ve helped businesses stand out with impactful designs.
             </p>
           </Link>
         </div>

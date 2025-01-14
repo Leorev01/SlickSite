@@ -3,21 +3,23 @@ import Image from "next/image";
 import Link from "next/link";
 import CTA from "@/components/CTA";
 
-const LandingPageServices = () => {
+const ECommerceServices = () => {
   return (
     <section className="bg-gray-50 py-16">
       <div className="container mx-auto px-6 mt-20">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-16">
           <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-2xl text-blue-950 mb-2">Landing Pages</h2>
+            <h2 className="text-2xl text-blue-950 mb-2">E-commerce</h2>
             <h3 className="text-5xl font-bold text-blue-950 mb-4">
-              High-Converting Landing Page Development
+              Bespoke E-commerce Solutions
             </h3>
             <p className="text-lg text-gray-600">
-              At Slick, we specialize in creating high-converting landing pages designed to drive results. 
-              Whether you&apos;re launching a product, promoting a service, or gathering leads, our landing pages 
-              are built to capture attention, engage visitors, and maximize conversions.
+              At Slick, we understand the importance of having a robust, 
+              user-friendly e-commerce platform to drive your business forward. 
+              Whether you need a new online store, an upgrade to your existing 
+              platform, or a custom solution tailored to your unique requirements, 
+              we deliver powerful, secure, and optimized e-commerce websites.
             </p>
             <Link
               href="/quote"
@@ -28,8 +30,8 @@ const LandingPageServices = () => {
           </div>
           <div className="md:w-1/2 mt-8 md:mt-0">
             <Image
-              src="/images/services/landing-page.svg"
-              alt="Landing Page Services"
+              src="/images/services/e-commerce.svg"
+              alt="E-commerce Services"
               className="rounded-lg shadow-lg"
               width={600}
               height={400}
@@ -37,47 +39,24 @@ const LandingPageServices = () => {
           </div>
         </div>
 
-        {/* Landing Page Development Section */}
+        {/* E-commerce Development Section */}
         <div className="mb-16">
           <h4 className="text-3xl font-bold text-blue-950 mb-4">
-            Tailored Landing Page Development
+            Comprehensive E-commerce Development
           </h4>
           <p className="text-lg text-gray-600 mb-4">
-            We create landing pages that are visually appealing, fast, and optimized for conversions. 
-            Our team works with you to understand your goals and audience, ensuring that every element 
-            of the landing page is designed to deliver results, whether that&apos;s generating leads or increasing sales.
+            Our e-commerce solutions are designed to provide a seamless shopping 
+            experience for your customers while meeting the specific needs of your 
+            business. From secure payment gateways to intuitive user interfaces 
+            and scalable backend systems, we ensure every aspect of your online 
+            store works perfectly.
           </p>
           <p className="text-lg text-gray-600">
-            We specialize in building mobile-responsive, SEO-friendly, and user-focused landing pages that 
-            are tailored to meet your marketing objectives and create a seamless user experience.
+            With expertise in platforms like Shopify, WooCommerce, and custom 
+            development, our team is equipped to create a tailored solution that 
+            drives sales and customer satisfaction.
           </p>
         </div>
-
-        {/* Example Project Section */}
-        <div className="mb-16 text-center">
-          <h4 className="text-3xl font-bold text-blue-950 mb-4">Example Project</h4>
-          <p className="text-lg text-gray-600 mb-8">
-            Check out one of our successful landing page projects that helped our client achieve their business goals.
-          </p>
-          <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
-            <Image
-              src="/images/projects/photographer.png"
-              alt="Product Launch Landing Page"
-              className="rounded-lg"
-              objectFit="cover"
-              objectPosition="top"
-              width={400}
-              height={250}
-              style={{ maxHeight: "250px", objectFit: "cover" }}
-            />
-            <h5 className="text-xl font-bold text-blue-950 mt-4">Photographer Landing Page</h5>
-            <p className="text-gray-600 mt-2">
-              A landing page designed for a professional photographer to showcase their portfolio and book sessions.
-            </p>
-          </div>
-        </div>
-
-
 
         {/* Our Process Section */}
         <div className="bg-white rounded-lg shadow-lg p-8">
@@ -96,7 +75,7 @@ const LandingPageServices = () => {
                     Step 1: Onboarding
                   </h5>
                   <p className="text-gray-600 mt-2">
-                    Share your goals and requirements to kickstart your landing page project.
+                    Share your goals and requirements to kickstart your e-commerce project.
                   </p>
                 </div>
               </div>
@@ -116,7 +95,8 @@ const LandingPageServices = () => {
                     Step 2: Design
                   </h5>
                   <p className="text-gray-600 mt-2">
-                    We design a visually stunning and functional layout that resonates with your target audience.
+                    We craft a visually appealing and intuitive design tailored 
+                    to your brand.
                   </p>
                 </div>
               </div>
@@ -136,7 +116,7 @@ const LandingPageServices = () => {
                     Step 3: Development
                   </h5>
                   <p className="text-gray-600 mt-2">
-                    We develop your landing page with fast load times, optimized code, and a smooth user experience.
+                    Build a secure and scalable e-commerce platform with robust features.
                   </p>
                 </div>
               </div>
@@ -156,7 +136,7 @@ const LandingPageServices = () => {
                     Step 4: Optimization
                   </h5>
                   <p className="text-gray-600 mt-2">
-                    We optimize your landing page for search engines and ensure it performs well on all devices.
+                    Optimize for performance, speed, and search engine rankings.
                   </p>
                 </div>
               </div>
@@ -176,7 +156,7 @@ const LandingPageServices = () => {
                     Step 5: Launch
                   </h5>
                   <p className="text-gray-600 mt-2">
-                    We launch your landing page and track its performance to ensure maximum conversion.
+                    Launch your online store and start reaching customers worldwide.
                   </p>
                 </div>
               </div>
@@ -190,4 +170,4 @@ const LandingPageServices = () => {
   );
 };
 
-export default LandingPageServices;
+export default ECommerceServices;

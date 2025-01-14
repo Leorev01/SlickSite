@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import CTA from "@/components/CTA";
 
 const GraphicDesign = () => {
   return (
@@ -11,16 +12,16 @@ const GraphicDesign = () => {
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-2xl text-blue-950 mb-2">Graphic Design</h2>
             <h3 className="text-5xl font-bold text-blue-950 mb-4">
-              Graphic Design Services
+              Expert Graphic Design Services
             </h3>
             <p className="text-lg text-gray-600">
-              Welcome to Slick, where visual identity meets unparalleled creativity. As a leading web development company, 
-              we understand the significance of impactful graphic design in making your brand stand out. Explore our design 
-              services, where we specialise in crafting memorable logos and eye-catching social media graphics that resonate 
-              with your audience.
+              Welcome to Slick, where creativity and strategy merge to build unforgettable brand visuals. As experts in web 
+              development and graphic design, we focus on creating designs that leave a lasting impression. Our services are 
+              tailored to deliver bespoke logos and stunning social media visuals that connect with your audience and reflect 
+              your unique brand identity.
             </p>
             <Link href="/quote" className="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700">
-                Get a Free Quote Today
+              Request a Free Quote Today
             </Link>
           </div>
           <div className="md:w-1/2 mt-8 md:mt-0">
@@ -37,44 +38,39 @@ const GraphicDesign = () => {
         {/* Logo Design Section */}
         <div className="mb-16">
           <h4 className="text-3xl font-bold text-blue-950 mb-4">
-            Logo Design: Elevating Your Brand Identity
+            Logo Design: Build a Strong Brand Identity
           </h4>
           <p className="text-lg text-gray-600 mb-4">
-            A logo is the visual cornerstone of your brand – it’s the first impression that lasts. At Slick, our design 
-            service is dedicated to creating unique and memorable logos that encapsulate the essence of your business. 
-            Our process begins with a thorough understanding of your brand values, mission, and target audience, ensuring 
-            that the final design aligns seamlessly with your identity.
+            A logo is the foundation of your brand&apos;s visual identity – a symbol that defines who you are. At Slick, we craft 
+            logos that capture your brand&apos;s story, values, and mission. Each design begins with a deep understanding of your 
+            business, ensuring the final product perfectly represents your brand.
           </p>
           <p className="text-lg text-gray-600 mb-4">
-            What sets us apart is our commitment to providing multiple logo options. We believe in collaboration, and by 
-            presenting you with various concepts, we ensure that you have the freedom to choose a design that resonates 
-            with your vision. Additionally, we offer unlimited changes and alterations, allowing you to refine the chosen 
-            design until it perfectly reflects your brand identity.
+            We provide multiple logo concepts to choose from and work closely with you to refine the design. Unlimited 
+            revisions are included to guarantee your satisfaction and create a logo that truly reflects your brand&apos;s vision.
           </p>
           <p className="text-lg text-gray-600">
-            Contact us to discuss how our design service can elevate your brand’s visual identity.
+            Let’s discuss how we can enhance your brand identity through a custom logo design that leaves a memorable impression.
           </p>
         </div>
 
         {/* Social Media Design Section */}
         <div>
           <h4 className="text-3xl font-bold text-blue-950 mb-4">
-            Social Media Graphic Design: Captivating Your Audience
+            Social Media Graphics: Engage and Inspire
           </h4>
           <p className="text-lg text-gray-600 mb-4">
-            In the dynamic world of social media, eye-catching visuals are paramount. Our Social Media Design service is 
-            tailored to create compelling graphics that not only grab attention but also tell your brand story effectively. 
-            From engaging Facebook posts to stunning Instagram visuals, we have your social media presence covered.
+            In today&apos;s fast-paced digital world, impactful social media visuals are essential for engagement. Our social media 
+            graphic design services are tailored to create visually striking content that tells your brand&apos;s story and connects 
+            with your audience. Whether it&apos;s Instagram posts, Facebook banners, or Twitter graphics, we&apos;ve got you covered.
           </p>
           <p className="text-lg text-gray-600 mb-4">
-            Similar to our logo process, we provide multiple options for social media graphics. We believe in giving you 
-            the flexibility to choose the design that aligns with your brand aesthetics. Moreover, our commitment to 
-            client satisfaction ensures unlimited changes and alterations, allowing you to fine-tune the graphics until 
-            they match your vision.
+            Similar to our logo design process, we offer multiple design options for your social media needs. You&apos;ll have the 
+            opportunity to choose and refine the graphics until they align perfectly with your brand identity and marketing goals.
           </p>
           <p className="text-lg text-gray-600">
-            Explore our <Link href="/work" className="text-blue-600 hover:underline">Design Portfolio</Link> 
-            to see how we’ve transformed social media presence for clients across diverse industries.
+            Check out our <Link href="/work" className="text-blue-600 hover:underline">Design Portfolio</Link> to see how we&apos;ve 
+            helped clients elevate their social media presence with compelling visuals.
           </p>
         </div>
 
@@ -83,23 +79,23 @@ const GraphicDesign = () => {
           <h3 className="text-4xl font-bold text-blue-950 mb-6">Why Choose Slick for Graphic Design?</h3>
           <ul className="text-lg text-gray-600 space-y-4">
             <li>
-              <strong>Creativity Meets Strategy:</strong> Our design process combines creativity with a strategic approach, 
-              ensuring that your visual elements align with your brand’s overall objectives.
+              <strong>Creativity Meets Strategy:</strong> Our designs combine artistic creativity with a strategic approach 
+              to align with your brand goals and messaging.
             </li>
             <li>
-              <strong>Multiple Options, Unlimited Changes:</strong> We provide you with multiple design options and unlimited 
-              alterations, giving you the freedom to choose and refine until you are completely satisfied.
+              <strong>Flexibility and Collaboration:</strong> We offer multiple design concepts and unlimited revisions, 
+              ensuring you get the perfect design for your needs.
             </li>
             <li>
-              <strong>Tailored Solutions:</strong> Every brand is unique, and our design services are tailored to meet the 
-              specific needs and aspirations of your business.
+              <strong>Tailored Solutions:</strong> We customise every design to reflect your unique brand personality and 
+              appeal to your target audience.
             </li>
             <li>
-              <strong>Proven Expertise:</strong> Visit our <Link href="/work" className="text-blue-600 hover:underline">Previous Works</Link> 
-              page to witness the impact our designs have had on businesses like yours.
+              <strong>Proven Expertise:</strong> Explore our <Link href="/work" className="text-blue-600 hover:underline">Previous Work</Link> to see how our designs have driven success for businesses across diverse industries.
             </li>
           </ul>
         </div>
+        <CTA />
       </div>
     </section>
   );
