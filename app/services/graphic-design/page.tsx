@@ -14,7 +14,7 @@ const GraphicDesign = () => {
               Graphic Design Services
             </h3>
             <p className="text-lg text-gray-600">
-              Welcome to Snapi, where visual identity meets unparalleled creativity. As a leading web development company, 
+              Welcome to Slick, where visual identity meets unparalleled creativity. As a leading web development company, 
               we understand the significance of impactful graphic design in making your brand stand out. Explore our design 
               services, where we specialise in crafting memorable logos and eye-catching social media graphics that resonate 
               with your audience.
@@ -40,7 +40,7 @@ const GraphicDesign = () => {
             Logo Design: Elevating Your Brand Identity
           </h4>
           <p className="text-lg text-gray-600 mb-4">
-            A logo is the visual cornerstone of your brand – it’s the first impression that lasts. At Snapi, our design 
+            A logo is the visual cornerstone of your brand – it’s the first impression that lasts. At Slick, our design 
             service is dedicated to creating unique and memorable logos that encapsulate the essence of your business. 
             Our process begins with a thorough understanding of your brand values, mission, and target audience, ensuring 
             that the final design aligns seamlessly with your identity.
@@ -80,7 +80,7 @@ const GraphicDesign = () => {
 
         {/* Why Choose Us Section */}
         <div className="bg-white rounded-lg shadow-lg p-8 mt-16 text-center">
-          <h3 className="text-4xl font-bold text-blue-950 mb-6">Why Choose Snapi for Graphic Design?</h3>
+          <h3 className="text-4xl font-bold text-blue-950 mb-6">Why Choose Slick for Graphic Design?</h3>
           <ul className="text-lg text-gray-600 space-y-4">
             <li>
               <strong>Creativity Meets Strategy:</strong> Our design process combines creativity with a strategic approach, 
