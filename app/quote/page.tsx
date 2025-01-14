@@ -1,7 +1,7 @@
 'use client'
 import AppointmentForm from '../landing-page/components/AppointmentForm'
 
-const QutotePage = () => {
+const QuotePage = () => {
   return (
     <div className='container mx-auto px-6 pt-32'>
         <AppointmentForm />
@@ -9,4 +9,4 @@ const QutotePage = () => {
   )
 }
 
-export default QutotePage
+export default QuotePage

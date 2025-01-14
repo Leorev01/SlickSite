@@ -6,7 +6,7 @@ import facebookIcon from "../public/images/icons/facebook.svg";
 export default function Footer() {
     return (
       <footer className="bg-blue-950 text-white py-8 ">
-        <div className="grid grid-cols-3 px-20">
+        <div className="grid md:grid-cols-3 grid-cols-1 px-20">
           <div className='flex flex-col items-center justify-start space-x-4'>
               <Image src='/images/SlickSite3.png' alt='Logo' width={400} height={400} />
               <p>We transform your online presence to generate a surge in leads and inquiries, delivering premium sales appointments tailored to service-based businesses.</p>
