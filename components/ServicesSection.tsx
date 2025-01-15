@@ -12,7 +12,7 @@ export default function ServicesSection() {
     {
       title: 'SEO & Content Marketing',
       description: 'We optimize your website for search engines to attract organic traffic and create tailored, industry-specific content that engages and converts visitors.',
-      url: 'images/services/seo.svg',
+      url: 'images/services/digital-services.svg',
     },
     {
       title: 'Website Hosting & Maintenance',

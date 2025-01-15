@@ -20,14 +20,15 @@ const DesignServices = () => {
         {/* Design Services Sections */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           {/* Web Design */}
-          <Link href='/' className="flex flex-col items-center hover:mt-[-1rem] hover:mb-[1rem] transform duration-300">
-            <Image
-              src={webImage}
-              alt="Custom Web Design"
-              className="rounded-lg shadow-lg"
-              width={600}
-              height={400}
-            />
+          <Link href="/" className="flex flex-col items-center hover:scale-105 transform duration-300">
+            <div className="w-full h-60 relative">
+              <Image
+                src={webImage}
+                alt="Custom Web Design"
+                className="rounded-lg shadow-lg object-cover"
+                fill
+              />
+            </div>
             <h4 className="text-3xl font-bold text-blue-950 mt-6">Custom Web Design</h4>
             <p className="text-lg text-gray-600 mt-4">
               In today&apos;s fast-paced digital landscape, your website is the first impression of your business. 
@@ -42,14 +43,15 @@ const DesignServices = () => {
           </Link>
 
           {/* Graphic Design */}
-          <Link href='/services/graphic-design' className="flex flex-col items-center hover:mt-[-1rem] hover:mb-[1rem] transform duration-300">
-            <Image
-              src={graphicImage}
-              alt="Custom Graphic Design"
-              className="rounded-lg shadow-lg"
-              width={400}
-              height={300}
-            />
+          <Link href="/services/graphic-design" className="flex flex-col items-center hover:scale-105 transform duration-300">
+            <div className="w-full h-60 relative">
+              <Image
+                src={graphicImage}
+                alt="Custom Graphic Design"
+                className="rounded-lg shadow-lg object-cover"
+                fill
+              />
+            </div>
             <h4 className="text-3xl font-bold text-blue-950 mt-6">Custom Graphic Design</h4>
             <p className="text-lg text-gray-600 mt-4">
               Your brand identity is essential to creating a memorable impression. Our custom graphic design services 
@@ -90,7 +92,7 @@ const DesignServices = () => {
             Contact us today to discuss your project or browse our detailed portfolios to learn more about our work.
           </p>
           <Link href="/quote" className="mt-6 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700">
-              Get in Touch
+            Get in Touch
           </Link>
         </div>
       </div>

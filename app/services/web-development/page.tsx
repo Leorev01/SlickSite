@@ -18,16 +18,17 @@ const WebDevelopment = () => {
         </p>
 
         {/* Web Development Services Sections */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-16">
           {/* Web Development */}
-          <Link href='/services/custom-webdev' className="flex flex-col items-center hover:mt-[-1rem] hover:mb-[1rem] transform duration-300">
-            <Image
-              src={webDevImage}
-              alt="Web Development"
-              className="rounded-lg shadow-lg"
-              width={500}
-              height={400}
-            />
+          <Link href="/services/custom-webdev" className="flex flex-col items-center hover:scale-105 transform duration-300">
+            <div className="w-full h-60 relative">
+              <Image
+                src={webDevImage}
+                alt="Web Development"
+                className="rounded-lg shadow-lg object-cover"
+                fill
+              />
+            </div>
             <h4 className="text-3xl font-bold text-blue-950 mt-6">Custom Web Development</h4>
             <p className="text-lg text-gray-600 mt-4">
               Whether you need a corporate website, a portfolio, or a fully dynamic platform, our custom web 
@@ -42,14 +43,15 @@ const WebDevelopment = () => {
           </Link>
 
           {/* E-commerce Development */}
-          <Link href='/services/ecommerce-development' className="flex flex-col items-center hover:mt-[-1rem] hover:mb-[1rem] transform duration-300">
-            <Image
-              src={ecomImage}
-              alt="E-commerce Development"
-              className="rounded-lg shadow-lg"
-              width={550}
-              height={400}
-            />
+          <Link href="/services/ecommerce-development" className="flex flex-col items-center hover:scale-105 transform duration-300">
+            <div className="w-full h-60 relative">
+              <Image
+                src={ecomImage}
+                alt="E-commerce Development"
+                className="rounded-lg shadow-lg object-cover"
+                fill
+              />
+            </div>
             <h4 className="text-3xl font-bold text-blue-950 mt-6">E-commerce Development</h4>
             <p className="text-lg text-gray-600 mt-4">
               Take your business online with our comprehensive e-commerce development services. We build secure, scalable, 
@@ -63,14 +65,15 @@ const WebDevelopment = () => {
           </Link>
 
           {/* Landing Page Development */}
-          <Link href='/services/landing-page-development' className="flex flex-col items-center hover:mt-[-1rem] hover:mb-[1rem] transform duration-300">
-            <Image
-              src={landingPageImage}
-              alt="Landing Page Development"
-              className="rounded-lg shadow-lg"
-              width={600}
-              height={400}
-            />
+          <Link href="/services/landing-page-development" className="flex flex-col items-center hover:scale-105 transform duration-300">
+            <div className="w-full h-60 relative">
+              <Image
+                src={landingPageImage}
+                alt="Landing Page Development"
+                className="rounded-lg shadow-lg object-cover"
+                fill
+              />
+            </div>
             <h4 className="text-3xl font-bold text-blue-950 mt-6">Landing Page Development</h4>
             <p className="text-lg text-gray-600 mt-4">
               Maximize your marketing campaigns with high-converting landing pages. Our landing page development 

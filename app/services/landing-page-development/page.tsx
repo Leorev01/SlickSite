@@ -26,7 +26,7 @@ const LandingPageServices = () => {
               Get a Free Quote Today
             </Link>
           </div>
-          <div className="md:w-1/2 mt-8 md:mt-0">
+          <div className="mt-8 md:mt-0">
             <Image
               src="/images/services/landing-page.svg"
               alt="Landing Page Services"
