@@ -1,19 +1,11 @@
-'use client';
-import { useState } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
 
 const LandingPage = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert(`Subscribed with: ${email}`);
-  };
-
   return (
     <section className="overflow-hidden">
-
       {/* Main Caption Section */}
-      <section className="bg-white text-center py-24 px-6">
+      <section className="bg-white text-center py-12 px-6">
         <h1 className="text-4xl font-bold text-blue-950">
           Construction/Trade websites from as little as £399
         </h1>
@@ -22,46 +14,62 @@ const LandingPage = () => {
         </p>
       </section>
 
+      {/* Features List Section */}
+      <section className="text-start pb-8 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <ul className="space-y-4">
+            <li className="text-xl font-medium text-blue-950">
+              Fully SEO Optimised Website
+            </li>
+            <li className="text-xl font-medium text-blue-950">
+              Designed and launched within 2 weeks
+            </li>
+            <li className="text-xl font-medium text-blue-950">
+              Specifically designed to convert leads
+            </li>
+          </ul>
+        </div>
+      </section>
+
       {/* Video Section */}
-      <section className="text-center py-16">
+      <section className="text-center py-8">
         <div className="max-w-4xl mx-auto">
           <video
             width="100%"
             controls
             className="rounded-lg shadow-lg"
-            src="/video/demo.mp4" // Replace with your actual video link
+            src="/videos/landing.mp4" // Replace with your actual video link
           >
             Your browser does not support the video tag.
           </video>
         </div>
-      </section>
 
-      {/* Call-to-Action Section */}
-      <section className="bg-blue-950 text-center py-16 text-white">
-        <h2 className="text-3xl font-semibold">
-          Ready to get your website started?
-        </h2>
-        <p className="mt-4 text-lg">
-          Our affordable websites are designed to help you grow. Get started today!
-        </p>
-        <button className="mt-8 px-6 py-3 bg-yellow-500 text-blue-950 font-semibold rounded-lg hover:bg-yellow-600 transition duration-300">
-          Get Started
-        </button>
+        {/* Call-to-Action Section */}
+        <div className="flex flex-col items-center py-16">
+          <p>Watch the video to learn more</p>
+          <Link
+            href="quote"
+            type="button"
+            className="text-center py-8 px-6 bg-red-700 text-white rounded-lg hover:bg-red-800 transition duration-300"
+          >
+            <h4 className="text-3xl font-bold">Get a Price Today</h4>
+            <p className="mt-2">Book In A 15 Minute Phone Call</p>
+          </Link>
+
+          <Link href="portfolio">
+            <Image
+              src="/images/trustpilot.png"
+              alt="Trustpilot Logo"
+              width={300}
+              height={300}
+              className="mx-auto"
+            />
+          </Link>
+        </div>
       </section>
 
       {/* Trustpilot Section */}
-      <section className="text-center py-16 bg-gray-50">
-        <h2 className="text-3xl font-bold text-blue-950">See What Our Clients Say</h2>
-        <p className="mt-4 text-lg text-gray-700">We're proud of the positive feedback we receive.</p>
-        <a
-          href="https://www.trustpilot.com/review/yourwebsite.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 text-blue-600 hover:underline font-semibold"
-        >
-          Check Our Trustpilot Reviews
-        </a>
-      </section>
+      <section className="text-center py-16 bg-gray-50"></section>
 
       {/* "Don’t Overpay for a Website" Section */}
       <section className="text-center py-16">
@@ -107,8 +115,12 @@ const LandingPage = () => {
         <div className="container mx-auto text-center">
           <p>&copy; 2024 Slick Site. All rights reserved.</p>
           <div className="mt-4">
-            <a href="#" className="mx-4 text-lg">Privacy Policy</a>
-            <a href="#" className="mx-4 text-lg">Terms of Service</a>
+            <a href="#" className="mx-4 text-lg">
+              Privacy Policy
+            </a>
+            <a href="#" className="mx-4 text-lg">
+              Terms of Service
+            </a>
           </div>
         </div>
       </footer>
