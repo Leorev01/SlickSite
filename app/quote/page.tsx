@@ -1,5 +1,5 @@
 'use client'
-import AppointmentForm from '../landing-page/components/AppointmentForm'
+import AppointmentForm from '../old-landing-page2/components/AppointmentForm'
 
 const QuotePage = () => {
   return (
