@@ -51,7 +51,7 @@ const Navbar = () => {
           <div className="relative group">
             <Link
               href="/services"
-              className="hover:text-gray-300 cursor-pointer py-4"
+              className="hover:text-gray-300 cursor-pointer py-6"
             >
               Services
             </Link>
@@ -61,7 +61,7 @@ const Navbar = () => {
               <div className="grid grid-cols-3 gap-16">
                 {/* Design Category */}
                 <div className="space-y-6">
-                  <h5 className="font-semibold text-white text-xl">Design</h5>
+                  <Link href='/services/web-design' className="font-semibold text-white text-xl">Design</Link>
                   <Link href="/services/web-design" className="block text-white hover:text-gray-300 text-lg">
                     Web Design
                   </Link>
@@ -72,8 +72,8 @@ const Navbar = () => {
 
                 {/* Development Category */}
                 <div className="space-y-6">
-                  <h5 className="font-semibold text-white text-xl">Development</h5>
-                  <Link href="/services/web-development" className="block text-white hover:text-gray-300 text-lg">
+                  <Link href="/services/web-development" className="font-semibold text-white text-xl">Development</Link>
+                  <Link href="/services/custom-webdev" className="block text-white hover:text-gray-300 text-lg">
                     Web Development
                   </Link>
                   <Link href="/services/ecommerce-development" className="block text-white hover:text-gray-300 text-lg">
@@ -86,11 +86,11 @@ const Navbar = () => {
 
                 {/* Digital Marketing Category */}
                 <div className="space-y-6">
-                  <h5 className="font-semibold text-white text-xl">Digital Marketing</h5>
+                  <Link href="/services/digital-marketing" className="font-semibold text-white text-xl">Digital Marketing</Link>
                   <Link href="/services/seo" className="block text-white hover:text-gray-300 text-lg">
                     SEO
                   </Link>
-                  <Link href="/articles" className="block text-white hover:text-gray-300 text-lg">
+                  <Link href="/services/articles" className="block text-white hover:text-gray-300 text-lg">
                     Articles
                   </Link>
                   <Link href="/services/web-hosting" className="block text-white hover:text-gray-300 text-lg">

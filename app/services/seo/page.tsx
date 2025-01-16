@@ -12,10 +12,10 @@ const SEOServices = () => {
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-2xl text-blue-950 mb-2">SEO Services</h2>
             <h3 className="text-5xl font-bold text-blue-950 mb-4">
-              Welcome to Snapi: Elevate Your Online Presence
+              Welcome to Slick: Elevate Your Online Presence
             </h3>
             <p className="text-lg text-gray-600">
-              Welcome to Snapi, your gateway to a robust online presence through
+              Welcome to Slick, your gateway to a robust online presence through
               our comprehensive SEO services. As a premier web development
               company, we understand that a well-optimised website is key to
               achieving visibility, attracting organic traffic, and ultimately,
@@ -46,7 +46,7 @@ const SEOServices = () => {
             Technical and On-Page SEO: The Bedrock of Digital Success
           </h4>
           <p className="text-lg text-gray-600 mb-4">
-            At Snapi, we believe that a website’s success begins with a strong
+            At Slick, we believe that a website’s success begins with a strong
             foundation of Technical and On-Page SEO. Our expert team ensures
             that every website we build is equipped with the latest technical
             optimizations to enhance performance and user experience. From
