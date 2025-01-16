@@ -62,20 +62,24 @@ const ContactCTASection = () => {
   };
 
   return (
-    <section id='contact' className="bg-gray-50 py-16">
+    <section id="contact" className="bg-gray-50 py-16">
       <div className="container mx-auto px-6 text-center">
-        <SubHeading title='CONTACT US' text='Get in Touch' />
-        <p className='text-blue-950 mt-[-3rem] mb-10'>Take 30 seconds to fill out a quick form, and a team member will be in touch ASAP</p>
+        <SubHeading title="CONTACT US" text="Get in Touch" />
+        <p className="text-blue-950 mt-[-3rem] mb-10">
+          Take 30 seconds to fill out a quick form, and a team member will be in touch ASAP
+        </p>
 
         {/* Contact Form */}
         <form
           onSubmit={handleSubmit}
-          className="grid grid-cols-3 gap-4 text-blue-950 text-start"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-blue-950 text-start"
           aria-label="Contact Form"
         >
           {/* Name Input */}
-          <div className="col-span-1">
-            <label htmlFor="name" className="block text-sm font-semibold mb-2">Name</label>
+          <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-1">
+            <label htmlFor="name" className="block text-sm font-semibold mb-2">
+              Name
+            </label>
             <input
               type="text"
               id="name"
@@ -91,7 +95,9 @@ const ContactCTASection = () => {
 
           {/* Email Input */}
           <div className="col-span-1">
-            <label htmlFor="email" className="block text-sm font-semibold mb-2">Email</label>
+            <label htmlFor="email" className="block text-sm font-semibold mb-2">
+              Email
+            </label>
             <input
               type="email"
               id="email"
@@ -107,7 +113,9 @@ const ContactCTASection = () => {
 
           {/* Phone Input */}
           <div className="col-span-1">
-            <label htmlFor="phone" className="block text-sm font-semibold mb-2">Phone (Optional)</label>
+            <label htmlFor="phone" className="block text-sm font-semibold mb-2">
+              Phone (Optional)
+            </label>
             <input
               type="tel"
               id="phone"
@@ -120,8 +128,10 @@ const ContactCTASection = () => {
           </div>
 
           {/* Message Input */}
-          <div className="col-span-3">
-            <label htmlFor="message" className="block text-sm font-semibold mb-2">Message</label>
+          <div className="col-span-1 sm:col-span-2 md:col-span-3">
+            <label htmlFor="message" className="block text-sm font-semibold mb-2">
+              Message
+            </label>
             <textarea
               id="message"
               name="message"
@@ -136,7 +146,7 @@ const ContactCTASection = () => {
           </div>
 
           {/* Submit Button */}
-          <div className="col-span-3">
+          <div className="col-span-1 sm:col-span-2 md:col-span-3">
             <button
               type="submit"
               disabled={isSubmitting}
@@ -150,7 +160,11 @@ const ContactCTASection = () => {
         {/* Success/Error Message */}
         <p
           className={`mt-6 text-xl font-semibold ${
-            messageType === 'success' ? 'text-green-600' : messageType === 'error' ? 'text-red-600' : ''
+            messageType === 'success'
+              ? 'text-green-600'
+              : messageType === 'error'
+              ? 'text-red-600'
+              : ''
           }`}
           aria-live="polite"
         >

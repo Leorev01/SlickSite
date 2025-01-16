@@ -61,7 +61,7 @@ const Navbar = () => {
               <div className="grid grid-cols-3 gap-16">
                 {/* Design Category */}
                 <div className="space-y-6">
-                  <Link href='/services/web-design' className="font-semibold text-white text-xl">Design</Link>
+                  <Link href='/services/web-design' className="font-semibold text-white text-xl hover:text-gray-300">Design</Link>
                   <Link href="/services/web-design" className="block text-white hover:text-gray-300 text-lg">
                     Web Design
                   </Link>
@@ -72,7 +72,7 @@ const Navbar = () => {
 
                 {/* Development Category */}
                 <div className="space-y-6">
-                  <Link href="/services/web-development" className="font-semibold text-white text-xl">Development</Link>
+                  <Link href="/services/web-development" className="font-semibold text-white text-xl hover:text-gray-300">Development</Link>
                   <Link href="/services/custom-webdev" className="block text-white hover:text-gray-300 text-lg">
                     Web Development
                   </Link>
@@ -86,7 +86,7 @@ const Navbar = () => {
 
                 {/* Digital Marketing Category */}
                 <div className="space-y-6">
-                  <Link href="/services/digital-marketing" className="font-semibold text-white text-xl">Digital Marketing</Link>
+                  <Link href="/services/digital-marketing" className="font-semibold text-white text-xl hover:text-gray-300">Digital Marketing</Link>
                   <Link href="/services/seo" className="block text-white hover:text-gray-300 text-lg">
                     SEO
                   </Link>
@@ -146,51 +146,61 @@ const Navbar = () => {
 
         {/* Services Dropdown with Nested Dropdowns */}
         <div>
-          <button
-            className="flex justify-between w-full text-white hover:text-gray-300 text-lg"
-            onClick={toggleServices}
-          >
-            Services
-            <svg
-              className={`w-4 h-4 transform ${isServicesOpen ? 'rotate-180' : ''}`}
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <div className="flex justify-between w-full items-center">
+            <Link href="/services" className="text-white hover:text-gray-300 text-lg">
+              Services
+            </Link>
+            <button
+              className="focus:outline-none"
+              onClick={toggleServices}
+              aria-label="Toggle Services Dropdown"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
+              <svg
+                className={`w-4 h-4 transform ${isServicesOpen ? 'rotate-180' : ''}`}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+          </div>
 
           {isServicesOpen && (
             <div className="space-y-4 pl-4">
               {/* Design Dropdown */}
               <div>
-                <button
-                  className="flex justify-between w-full text-white hover:text-gray-300 text-lg"
-                  onClick={toggleDesign}
-                >
-                  Design
-                  <svg
-                    className={`w-4 h-4 transform ${isDesignOpen ? 'rotate-180' : ''}`}
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                <div className="flex justify-between w-full items-center">
+                  <Link href="/services/design" className="text-white hover:text-gray-300 text-lg">
+                    Design
+                  </Link>
+                  <button
+                    className="focus:outline-none"
+                    onClick={toggleDesign}
+                    aria-label="Toggle Design Dropdown"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
+                    <svg
+                      className={`w-4 h-4 transform ${isDesignOpen ? 'rotate-180' : ''}`}
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                </div>
 
                 {isDesignOpen && (
                   <div className="space-y-2 pl-6">
@@ -206,26 +216,31 @@ const Navbar = () => {
 
               {/* Development Dropdown */}
               <div>
-                <button
-                  className="flex justify-between w-full text-white hover:text-gray-300 text-lg"
-                  onClick={toggleDevelopment}
-                >
-                  Development
-                  <svg
-                    className={`w-4 h-4 transform ${isDevelopmentOpen ? 'rotate-180' : ''}`}
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                <div className="flex justify-between w-full items-center">
+                  <Link href="/services/development" className="text-white hover:text-gray-300 text-lg">
+                    Development
+                  </Link>
+                  <button
+                    className="focus:outline-none"
+                    onClick={toggleDevelopment}
+                    aria-label="Toggle Development Dropdown"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
+                    <svg
+                      className={`w-4 h-4 transform ${isDevelopmentOpen ? 'rotate-180' : ''}`}
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                </div>
 
                 {isDevelopmentOpen && (
                   <div className="space-y-2 pl-6">
@@ -244,26 +259,31 @@ const Navbar = () => {
 
               {/* Marketing Dropdown */}
               <div>
-                <button
-                  className="flex justify-between w-full text-white hover:text-gray-300 text-lg"
-                  onClick={toggleMarketing}
-                >
-                  Digital Marketing
-                  <svg
-                    className={`w-4 h-4 transform ${isMarketingOpen ? 'rotate-180' : ''}`}
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                <div className="flex justify-between w-full items-center">
+                  <Link href="/services/marketing" className="text-white hover:text-gray-300 text-lg">
+                    Digital Marketing
+                  </Link>
+                  <button
+                    className="focus:outline-none"
+                    onClick={toggleMarketing}
+                    aria-label="Toggle Marketing Dropdown"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
+                    <svg
+                      className={`w-4 h-4 transform ${isMarketingOpen ? 'rotate-180' : ''}`}
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                </div>
 
                 {isMarketingOpen && (
                   <div className="space-y-2 pl-6">
@@ -282,6 +302,7 @@ const Navbar = () => {
             </div>
           )}
         </div>
+
 
         <Link href="/work" className="block text-white hover:text-gray-300">
           Our Work
