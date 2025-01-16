@@ -14,12 +14,12 @@ export default function Footer() {
           <div className="mx-auto text-center px-6">
             <p className="text-xl font-semibold mb-4">Useful Links</p>
             <div className="flex flex-col space-y-2">
-              <Link href="#" className="text-gray-400 hover:text-white">About</Link>
-              <Link href='#' className="text-gray-400 hover:text-white">Services</Link>
-              <Link href="#" className="text-gray-400 hover:text-white">Our Work</Link>
-              <Link href="#" className="text-gray-400 hover:text-white">Free Quote</Link>
-              <Link href="#" className="text-gray-400 hover:text-white">TrustPilot</Link>
-              <Link href="#" className="text-gray-400 hover:text-white">FaceBook</Link>
+              <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
+              <Link href='/services' className="text-gray-400 hover:text-white">Services</Link>
+              <Link href="/work" className="text-gray-400 hover:text-white">Our Work</Link>
+              <Link href="/quote" className="text-gray-400 hover:text-white">Free Quote</Link>
+              <Link href="https://uk.trustpilot.com/review/slick-site.com" className="text-gray-400 hover:text-white">TrustPilot</Link>
+              <Link href="https://www.facebook.com/profile.php?id=61571227828830&locale=en_GB" className="text-gray-400 hover:text-white">FaceBook</Link>
             </div>
           </div>
           <div className="flex flex-col space-y-2 mx-auto text-center px-6">
