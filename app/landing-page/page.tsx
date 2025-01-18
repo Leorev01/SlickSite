@@ -197,7 +197,7 @@ const LandingPage = () => {
       </section>
 
       {/* Contact Form Section */}
-      <h4 className='text-4xl font-bold text-blue-950 text-center py-10'>Book In Your Call</h4>
+      <h4 className='text-4xl font-bold text-blue-950 text-center py-10' id='contact'>Book In Your Call</h4>
       <AppointmentForm />
     </section>
   );

@@ -86,7 +86,7 @@ const AppointmentForm: React.FC = () => {
           Appointment Booked Successfully! Redirecting...
         </div>
       )}
-      <form onSubmit={handleSubmit} className="space-y-8" id='contact'>
+      <form onSubmit={handleSubmit} className="space-y-8">
         <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 text-center">
           Slick - Free Quotation Meeting
         </h2>
