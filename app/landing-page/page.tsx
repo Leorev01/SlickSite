@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import AppointmentForm from '@/components/AppointmentForm';
 
 const LandingPage = () => {
   return (
@@ -100,7 +101,7 @@ const LandingPage = () => {
         <div className="flex flex-col items-center py-8">
           
           <Link
-            href="quote"
+            href="#contact"
             type="button"
             className="text-center py-8 px-6 bg-red-700 text-white rounded-lg hover:bg-red-800 transition duration-300 md:w-[55rem] w-full"
           >
@@ -122,81 +123,82 @@ const LandingPage = () => {
 
       {/* "Don’t Overpay for a Website" Section */}
       <section className="text-center py-16 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-blue-950">Don’t Overpay for a Website!</h2>
-        <p className="mt-4 text-lg text-gray-700">
-        Of Course, a Nice-Looking Website is Important, but it doesn’t need to cost you a fortune. At Slick, we believe in delivering  
-    high-quality websites that not only look great but are also designed to grow your business—all at an affordable price.  
-    Say goodbye to unnecessary expenses and hello to a website that works for you. 
+        <h2 className="text-3xl font-bold text-blue-950">Don&apos;t Overpay for a Website!</h2>
+        <p className="mt-4 md:text-2xl text-lg text-gray-700">
+        We all know that having a professional, well-designed website is crucial for growing your business, generating leads, and showcasing your work.
+        <br/><br/>
+        But here&apos;s the thing—it doesn&apos;t have to cost you thousands of pounds with an expensive agency.
+        <br/><br/>
+        At Slick Websites, we specialize in creating fast, affordable, and high-converting websites for the home improvement and trade industries.
+        <br/><br/>
+        We build websites that don&apos;t just look great—they actually work to turn clicks into customers. Plus, we do it all without charging a fortune.
+        <br/><br/>
+        If you&apos;re looking for an affordable, high-performing website for your trade business, book a call below, and we&apos;ll provide you with a personalized price!
         </p>
+        <div className="flex flex-col items-center py-8">
+          <Link
+              href="#contact"
+              type="button"
+              className="text-center py-8 px-6 bg-red-700 text-white rounded-lg hover:bg-red-800 transition duration-300 md:w-[55rem] w-full"
+            >
+              <h4 className="text-3xl font-bold">Get a Price Today</h4>
+              <p className="mt-2">Book In A 15 Minute Phone Call</p>
+          </Link>
+        </div>
       </section>
 
-      {/* Why Choose Slick Section */}  
-      <section className="bg-gray-50 py-16 text-center">  
-        <h2 className="text-3xl font-bold text-blue-950">Why Choose Slick?</h2>  
-        <div className="mt-10 grid gap-8 md:grid-cols-3">  
-          <div className="bg-white shadow-lg rounded-lg p-6 text-left">  
-            <div className="flex items-center gap-3">  
-              <span className="text-3xl">💰</span>  
-              <h3 className="text-xl font-semibold text-blue-950">Affordable Pricing</h3>  
-            </div>  
-            <p className="mt-3 text-gray-700">Starting at just £399, we deliver professional websites tailored to your budget without cutting corners.</p>  
-          </div>  
-          <div className="bg-white shadow-lg rounded-lg p-6 text-left">  
-            <div className="flex items-center gap-3">  
-              <span className="text-3xl">🎨</span>  
-              <h3 className="text-xl font-semibold text-blue-950">Custom Designs</h3>  
-            </div>  
-            <p className="mt-3 text-gray-700">Stand out from the competition with bespoke designs tailored to your brand&apos;s identity and goals.</p>  
-          </div>  
-          <div className="bg-white shadow-lg rounded-lg p-6 text-left">  
-            <div className="flex items-center gap-3">  
-              <span className="text-3xl">📈</span>  
-              <h3 className="text-xl font-semibold text-blue-950">SEO Optimized</h3>  
-            </div>  
-            <p className="mt-3 text-gray-700">Our websites are crafted to boost your search rankings, helping you attract more customers online.</p>  
-          </div>  
-        </div>  
-      </section>  
- 
+      {/* Portfolio Section */}  
+    <section className="py-12 px-6 bg-gray-100">
+        <h2 className="text-3xl font-bold text-blue-950 text-center">Our Portfolio...</h2>
+        <div className="mt-8 space-y-8 max-w-4xl mx-auto">
+          {/* Review 1 */}
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="flex-shrink-0 w-full md:w-1/2 mb-4 md:mb-0">
+              <video
+                src="/videos/sjdroofing.mp4" // Replace with your actual video path
+                autoPlay
+                loop
+                muted
+                className="rounded-lg object-cover w-full mx-auto"
+              />
+            </div>
+            <div className="md:ml-6 text-center md:text-left">
+              <p>⭐⭐⭐⭐⭐</p>
+              <p className="font-bold text-xl">Shane - SJD Roofing</p>
+              <p className="mt-2 text-gray-700 md:text-xl">
+                &quot;The team at Slick is incredibly efficient and completed my website on time, even when we faced a major issue
+                with our old hosting provider. They turned it around quickly and even took over our hosting seamlessly. I highly
+                recommend them!&quot;
+              </p>
+            </div>
+          </div>
 
+          {/* Review 2 */}
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="flex-shrink-0 w-full md:w-1/2 h-60 overflow-hidden mb-4 md:mb-0">
+              <Image
+                src="/images/projects/surgemines.png"
+                alt="Surgemines"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover object-top rounded-md mx-auto"
+              />
+            </div>
+            <div className="md:ml-6 text-center md:text-left">
+              <p>⭐⭐⭐⭐⭐</p>
+              <p className="font-bold text-xl">Alawi - Surgemines</p>
+              <p className="mt-2 text-gray-700 md:text-xl">
+                &quot;Slick transformed my outdated self-built site into a professional, modern website. They integrated my social
+                media, Trustpilot, and everything else seamlessly. Excellent job all around!&quot;
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Additional CTA Section */}  
-      <section className="bg-blue-950 text-center py-16 text-white">  
-        <div className="max-w-4xl mx-auto px-6">  
-          <h2 className="text-4xl font-semibold">Ready to Take Your Business Online?</h2>  
-          <p className="mt-4 text-lg">  
-            Partner with Slick to build a website that works as hard as you do.  
-            Start attracting leads, boosting inquiries, and driving your business forward today.  
-          </p>  
-          <div className="flex flex-col sm:flex-row justify-center items-center mt-8 gap-4">  
-            <Link  
-              href="/quote"  
-              className="px-8 py-4 bg-yellow-500 text-blue-950 font-bold rounded-lg hover:bg-yellow-600 transition duration-300 text-xl"  
-            >  
-              Get a Free Quote  
-            </Link>  
-            <Link  
-              href="/work"  
-              className="px-8 py-4 border border-yellow-500 text-yellow-500 font-bold rounded-lg hover:bg-yellow-500 hover:text-blue-950 transition duration-300 text-xl"  
-            >  
-              View Our Work  
-            </Link>  
-          </div>  
-        </div>  
-        <div className="mt-12">  
-          <Image  
-            src="/images/trustpilot_white.png"  
-            alt="TrustPilot Logo"  
-            width={200}  
-            height={200}  
-            className="mx-auto hover:scale-105 transition duration-300"  
-          />  
-          <p className="mt-4 text-sm text-gray-400">Check out our reviews on TrustPilot!</p>  
-        </div>  
-      </section>  
-
-
-      {/* Footer Section */}
+      {/* Contact Form Section */}
+      <h4 className='text-4xl font-bold text-blue-950 text-center py-10'>Book In Your Call</h4>
+      <AppointmentForm />
     </section>
   );
 };
