@@ -91,7 +91,7 @@ const AppointmentForm: React.FC = () => {
           Slick - Free Quotation Meeting
         </h2>
         <p className="text-center px-8">
-          We will give you a call at your selected date and time to discuss your website and see if we're a fit.
+          We will give you a call at your selected date and time to discuss your website and see if we&apos;re a fit.
         </p>
         <div className="space-y-4">
           <div>
