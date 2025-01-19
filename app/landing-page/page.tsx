@@ -90,7 +90,7 @@ const LandingPage = () => {
             width="100%"
             controls
             className="rounded-lg shadow-lg"
-            src="/videos/landing.mp4" // Replace with your actual video link
+            src="/videos/landing2.mp4" // Replace with your actual video link
           >
             Your browser does not support the video tag.
           </video>
