@@ -159,9 +159,12 @@ const LandingPage = () => {
                 autoPlay
                 loop
                 muted
+                playsInline
+                controls={false}
                 className="rounded-lg object-cover w-full mx-auto"
               />
             </div>
+
             <div className="md:ml-6 text-center md:text-left">
               <p>⭐⭐⭐⭐⭐</p>
               <p className="font-bold text-xl">Shane - SJD Roofing</p>
