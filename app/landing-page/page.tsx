@@ -161,7 +161,7 @@ const LandingPage = () => {
                 muted
                 playsInline
                 controls={false}
-                className="rounded-lg object-cover w-full mx-auto"
+                className="rounded-lg object-cover w-full mx-auto video-no-controls"
               />
             </div>
 

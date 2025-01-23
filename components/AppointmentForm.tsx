@@ -71,7 +71,7 @@ const AppointmentForm: React.FC = () => {
   }, [success]);
 
   return (
-    <div className="max-w-2xl mx-auto bg-white dark:bg-gray-900 p-8 rounded-xl shadow-xl">
+    <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-xl">
       {errors.form && (
         <div
           role="alert"
@@ -87,7 +87,7 @@ const AppointmentForm: React.FC = () => {
         </div>
       )}
       <form onSubmit={handleSubmit} className="space-y-8">
-        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 text-center">
+        <h2 className="text-2xl font-bold text-gray-800 text-center">
           Slick - Free Quotation Meeting
         </h2>
         <p className="text-center px-8">
@@ -97,7 +97,7 @@ const AppointmentForm: React.FC = () => {
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-gray-600 dark:text-gray-300"
+              className="block text-sm font-medium text-gray-600"
             >
               Full Name
             </label>
@@ -106,7 +106,7 @@ const AppointmentForm: React.FC = () => {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border rounded-lg bg-gray-50 text-gray-800 focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your full name"
             />
             {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
@@ -115,7 +115,7 @@ const AppointmentForm: React.FC = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-600 dark:text-gray-300"
+                className="block text-sm font-medium text-gray-600"
               >
                 Email Address
               </label>
@@ -124,7 +124,7 @@ const AppointmentForm: React.FC = () => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border rounded-lg bg-gray-50 text-gray-800 focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your email"
               />
               {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
@@ -132,7 +132,7 @@ const AppointmentForm: React.FC = () => {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-sm font-medium text-gray-600 dark:text-gray-300"
+                className="block text-sm font-medium text-gray-600"
               >
                 Phone Number
               </label>
@@ -141,7 +141,7 @@ const AppointmentForm: React.FC = () => {
                 id="phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border rounded-lg bg-gray-50 text-gray-800 focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your phone number"
               />
               {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
@@ -150,7 +150,7 @@ const AppointmentForm: React.FC = () => {
           <div>
             <label
               htmlFor="website"
-              className="block text-sm font-medium text-gray-600 dark:text-gray-300"
+              className="block text-sm font-medium text-gray-600"
             >
               Current Website (Optional)
             </label>
@@ -159,14 +159,14 @@ const AppointmentForm: React.FC = () => {
               id="website"
               value={website}
               onChange={(e) => setWebsite(e.target.value)}
-              className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border rounded-lg bg-gray-50 text-gray-800 focus:ring-2 focus:ring-blue-500"
               placeholder="https://example.com"
             />
           </div>
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-gray-600 dark:text-gray-300"
+              className="block text-sm font-medium text-gray-600"
             >
               Message
             </label>
@@ -175,7 +175,7 @@ const AppointmentForm: React.FC = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               rows={5}
-              className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border rounded-lg bg-gray-50 text-gray-800 focus:ring-2 focus:ring-blue-500"
               placeholder="Tell us about your project or goals..."
             />
             {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
@@ -184,7 +184,7 @@ const AppointmentForm: React.FC = () => {
             <div>
               <label
                 htmlFor="date"
-                className="block text-sm font-medium text-gray-600 dark:text-gray-300"
+                className="block text-sm font-medium text-gray-600"
               >
                 Select Date
               </label>
@@ -194,14 +194,14 @@ const AppointmentForm: React.FC = () => {
                 value={date || ""}
                 onChange={(e) => setDate(e.target.value)}
                 min={today}
-                className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border rounded-lg bg-gray-50 text-gray-800 focus:ring-2 focus:ring-blue-500"
               />
               {errors.date && <p className="text-red-500 text-sm">{errors.date}</p>}
             </div>
             <div>
               <label
                 htmlFor="time"
-                className="block text-sm font-medium text-gray-600 dark:text-gray-300"
+                className="block text-sm font-medium text-gray-600"
               >
                 Select Time
               </label>
@@ -209,7 +209,7 @@ const AppointmentForm: React.FC = () => {
                 id="time"
                 value={time}
                 onChange={(e) => setTime(e.target.value)}
-                className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border rounded-lg bg-gray-5 text-gray-800 focus:ring-blue-500"
               >
                 <option value="">Select a time</option>
                 {Array.from({ length: 19 }).map((_, i) => {
