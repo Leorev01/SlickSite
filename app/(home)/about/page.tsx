@@ -1,9 +1,9 @@
 import CTA from '@/components/CTA';
-import pageImage from '../../public/images/about/me.jpg';
-import cardImage from '../../public/images/about/card.svg';
-import timeImage from '../../public/images/about/time.svg';
-import changesImage from '../../public/images/about/changes.svg';
-import mindImage from '../../public/images/about/mind.svg';
+import pageImage from '@/public/images/about/me.jpg';
+import cardImage from '@/public/images/about/card.svg';
+import timeImage from '@/public/images/about/time.svg';
+import changesImage from '@/public/images/about/changes.svg';
+import mindImage from '@/public/images/about/mind.svg';
 import Image from 'next/image';
 
 const tabs = [
