@@ -470,16 +470,7 @@ export default function LandingPage() {
           </div>
 
           {/* Right Column (Image - Receipt) */}
-          <div className="md:w-1/2 text-center">
-            <div className="bg-white p-6 shadow-lg rounded-lg max-w-xs mx-auto md:max-w-md">
-              <img src="https://your-image-url.com" alt="Receipt showing £399 after discount" className="w-full rounded-lg shadow-md mb-4" />
-              <div className="text-center">
-                <p className="text-xl font-semibold text-gray-800 mb-2">Total: £3999</p>
-                <p className="text-sm text-gray-500 line-through">Original Price: £3999</p>
-                <p className="text-xl font-semibold text-green-600 mt-2">Discounted Price: £399</p>
-              </div>
-            </div>
-          </div>
+           <img src="/images/pricing.png" alt="Receipt showing £399 after discount" className="w-full md:w-1/2 rounded-lg shadow-xl mb-4" />
         </div>
       </section>
         
