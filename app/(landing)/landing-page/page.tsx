@@ -449,7 +449,8 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
+      
+      {/* New Section: Why We Do This */}
       <section className="py-16 bg-white">
         <div className="container mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
           {/* Left Column (Text) */}
@@ -481,93 +482,65 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+        
+      {/* New Section: Our Application Process */}
+      {/* Section 1: Our Application Process with Reviews on the Left */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
+          {/* Left Section: Reviews */}
+          <div className="md:w-1/2 space-y-6">
+            <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-800">Ray Barry</h3>
+              <p className="text-gray-600 mt-2">&quot;I was waiting for the catch. I still can&apos;t believe I got an incredible website for free.&quot;</p>
+              <p className="text-yellow-500 mt-2">★★★★★</p>
+            </div>
 
+            <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-800">Tali N.</h3>
+              <p className="text-gray-600 mt-2">&quot;A great experience. I am not tech-savvy, and the idea of crafting a website was daunting. They held my hand every step of the way.&quot;</p>
+              <p className="text-yellow-500 mt-2">★★★★★</p>
+            </div>
+          </div>
 
-
-
-      {/* New Section: We Won't Charge You (Adjusted for Paid Services) */}
-      <section className="py-20 px-5 bg-white">
-        <motion.h2 
-          className="text-3xl md:text-4xl font-bold mb-6 text-center" 
-          initial={{ opacity: 0, y: -20 }} 
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Affordable, High-Quality Websites
-        </motion.h2>
-        <motion.p 
-          className="text-lg md:text-xl mb-6 text-center" 
-          initial={{ opacity: 0 }} 
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-        >
-          We build professional websites that other agencies charge thousands for, starting from just £399.
-        </motion.p>
-        <div className="text-center">
-        <QuoteDialog>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-xl">
-            Apply In 2 Minutes
-          </Button>
-        </QuoteDialog>
+          {/* Right Section: Application Process Text */}
+          <div className="md:w-1/2 text-center md:text-left">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Application Process</h2>
+            <p className="text-gray-600 text-lg mb-4">We accept only <strong>28.4% of applicants</strong>, but don&apos;t worry! Here&apos;s how you can apply to get started:</p>
+            <div className="space-y-4">
+              <p className="text-gray-600 text-lg">1. <strong>Fill out our quick application form.</strong> It&apos;ll only take <strong>2 minutes</strong>.</p>
+              <p className="text-gray-600 text-lg">2. <strong>Our team reviews your application</strong> and contacts you within 24-48 hours.</p>
+              <p className="text-gray-600 text-lg">3. <strong>We assign you a Senior Developer</strong> to begin building your website!</p>
+            </div>
+            <Link href="/apply" className="mt-8 inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-xl hover:bg-blue-700 transition-all">Apply Now</Link>
+          </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-5 bg-gray-100">
-        <motion.h2 
-          className="text-3xl md:text-4xl font-bold mb-6 text-center" 
-          initial={{ opacity: 0, y: -20 }} 
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          What Our Clients Say
-        </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { name: 'John Doe', testimonial: 'Amazing service! Our website looks stunning and performs even better.' },
-            { name: 'Jane Smith', testimonial: 'Highly professional team. They delivered exactly what we needed.' },
-            { name: 'Mike Johnson', testimonial: 'Fast and reliable. Highly recommend their web development services.' },
-          ].map((testimonial, index) => (
-            <motion.div 
-              key={testimonial.name} 
-              initial={{ opacity: 0, y: 20 }} 
-              animate={{ opacity: 1, y: 0 }} 
-              transition={{ delay: index * 0.2, duration: 0.8 }}
-            >
-              <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <p className="text-gray-600 italic">&quot;{testimonial.testimonial}&quot;</p>
-                  <p className="mt-4 font-semibold">- {testimonial.name}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+      {/* Section 2: We Guide You Every Step of the Way with Image */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
+          {/* Left Section: Text */}
+          <div className="md:w-1/2 text-center md:text-left">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">We Guide You Every Step of the Way</h2>
+            <p className="text-gray-600 text-lg mb-4">You don’t need to be tech-savvy. We’ll take care of everything while you stay informed every step of the way with easy-to-follow instructions and helpful videos.</p>
+            <p className="text-gray-600 text-lg">From startup founders to elderly business owners, we’ve successfully helped clients from all walks of life get their online presence up and running.</p>
+          </div>
+
+          {/* Right Section: Image */}
+          <div className="md:w-1/2 text-center">
+            <img src="https://your-image-url.com" alt="Guide Process" className="w-full rounded-lg shadow-md"/>
+            <Link href="/apply" className="mt-8 inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-xl hover:bg-blue-700 transition-all">Get Started Today</Link>
+          </div>
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="text-center py-20 px-5 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <motion.h2 
-          className="text-3xl md:text-4xl font-bold mb-4" 
-          initial={{ opacity: 0, y: -20 }} 
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Ready to Transform Your Online Presence?
-        </motion.h2>
-        <motion.p 
-          className="text-lg md:text-xl mb-6" 
-          initial={{ opacity: 0 }} 
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-        >
-          Contact us today for a free consultation!
-        </motion.p>
-        <QuoteDialog>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-xl">
-            Apply In 2 Minutes
-          </Button>
-        </QuoteDialog>
+      {/* Section 3: Ready to Get Started with a Big Apply Button */}
+      <section className="py-16 bg-blue-600 text-white">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-gray-200 text-lg mb-8">Apply now and get your website built by professionals for a starting price of £399.</p>
+          <a href="/apply" className="mt-8 inline-block bg-white text-blue-600 py-4 px-12 rounded-lg text-2xl font-semibold hover:bg-gray-100 transition-all">Apply Now</a>
+        </div>
       </section>
     </div>
   );
