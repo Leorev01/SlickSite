@@ -60,7 +60,7 @@ export default function LandingPage() {
           Affordable, fast, and tailored to your business needs. Let’s build your dream website today!
         </motion.p>
         <QuoteDialog>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-xl">
+          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-xl py-6 px-10 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
             Apply In 2 Minutes
           </Button>
         </QuoteDialog>
@@ -188,7 +188,7 @@ export default function LandingPage() {
                 That’s where we come in. We’ve helped thousands of business owners get a professional website—without breaking the bank. With our affordable solutions, you can have a stunning website for your business starting at just £399.
               </motion.p>
               <QuoteDialog>
-                <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 text-xl">
+                <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 text-xl py-6 px-10 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
                   Apply In 2 Minutes
                 </Button>
               </QuoteDialog>
@@ -273,8 +273,8 @@ export default function LandingPage() {
             transition={{ delay: 1.2, duration: 0.8 }}
           >
             <QuoteDialog>
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-xl">
-                Apply to Get Your Website Built by Professionals — From Just 399!
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-xl py-6 px-10 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                Apply to Get Your Website Built by Professionals — From Just £399!
               </Button>
             </QuoteDialog>
           </motion.div>
@@ -371,8 +371,8 @@ export default function LandingPage() {
             ))}
           </div>
           <QuoteDialog>
-            <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 text-xl mt-8">
-            Apply to Get Your Website Built by Professionals — From Just 399!
+            <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 text-xl py-6 px-10 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105 mt-8">
+              Apply to Get Your Website Built by Professionals — From Just £399!
             </Button>
           </QuoteDialog>
         </div>
@@ -451,7 +451,7 @@ export default function LandingPage() {
       </section>
       
       {/* New Section: Why We Do This */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
           {/* Left Column (Text) */}
           <div className="md:w-1/2 text-center md:text-left">
@@ -472,37 +472,49 @@ export default function LandingPage() {
           {/* Right Column (Image - Receipt) */}
            <img src="/images/pricing.png" alt="Receipt showing £399 after discount" className="w-full md:w-1/2 rounded-lg shadow-xl mb-4" />
         </div>
+        <div className="text-center mt-12">
+          <QuoteDialog>
+            <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 text-xl py-6 px-10 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+              Apply Now
+            </Button>
+          </QuoteDialog>
+        </div>
       </section>
         
       {/* New Section: Our Application Process */}
       {/* Section 1: Our Application Process with Reviews on the Left */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
           {/* Left Section: Reviews */}
           <div className="md:w-1/2 space-y-6">
             <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-gray-800">Ray Barry</h3>
-              <p className="text-gray-600 mt-2">&quot;I was waiting for the catch. I still can&apos;t believe I got an incredible website for free.&quot;</p>
+              <h3 className="text-xl font-semibold text-gray-800">Sam S.</h3>
+              <p className="text-gray-600 mt-2">&quot;I was waiting for the catch. I still can&apos;t believe I got an incredible website for such a good price.&quot;</p>
               <p className="text-yellow-500 mt-2">★★★★★</p>
             </div>
 
             <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-gray-800">Tali N.</h3>
-              <p className="text-gray-600 mt-2">&quot;A great experience. I am not tech-savvy, and the idea of crafting a website was daunting. They held my hand every step of the way.&quot;</p>
+              <h3 className="text-xl font-semibold text-gray-800">Ade N.</h3>
+              <p className="text-gray-600 mt-2">&quot;It was a fantastic experience. I&apos;m not very tech-savvy, and the thought of building a website felt overwhelming. They guided me through every step with ease.&quot;</p>
               <p className="text-yellow-500 mt-2">★★★★★</p>
             </div>
           </div>
 
           {/* Right Section: Application Process Text */}
           <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Application Process</h2>
-            <p className="text-gray-600 text-lg mb-4">We accept only <strong>28.4% of applicants</strong>, but don&apos;t worry! Here&apos;s how you can apply to get started:</p>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Process</h2>
+            <p className="text-gray-600 text-lg mb-4">Here&apos;s how you can get started:</p>
             <div className="space-y-4">
               <p className="text-gray-600 text-lg">1. <strong>Fill out our quick application form.</strong> It&apos;ll only take <strong>2 minutes</strong>.</p>
               <p className="text-gray-600 text-lg">2. <strong>Our team reviews your application</strong> and contacts you within 24-48 hours.</p>
               <p className="text-gray-600 text-lg">3. <strong>We assign you a Senior Developer</strong> to begin building your website!</p>
             </div>
-            <Link href="/apply" className="mt-8 inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-xl hover:bg-blue-700 transition-all">Apply Now</Link>
+            <QuoteDialog>
+              <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 text-xl py-6 px-10 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105 mt-8">
+                Apply Now
+              </Button>
+            </QuoteDialog>
+
           </div>
         </div>
       </section>
@@ -513,26 +525,49 @@ export default function LandingPage() {
           {/* Left Section: Text */}
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">We Guide You Every Step of the Way</h2>
-            <p className="text-gray-600 text-lg mb-4">You don’t need to be tech-savvy. We’ll take care of everything while you stay informed every step of the way with easy-to-follow instructions and helpful videos.</p>
-            <p className="text-gray-600 text-lg">From startup founders to elderly business owners, we’ve successfully helped clients from all walks of life get their online presence up and running.</p>
+            <p className="text-gray-600 text-lg mb-4">
+              You don&apos;t need to be tech-savvy. We&apos;ll take care of everything while you stay informed every step of the way with easy-to-follow instructions and helpful videos.
+            </p>
+            <p className="text-gray-600 text-lg">
+              From startup founders to elderly business owners, we&apos;ve successfully helped clients from all walks of life get their online presence up and running.
+            </p>
           </div>
 
           {/* Right Section: Image */}
-          <div className="md:w-1/2 text-center">
-            <img src="https://your-image-url.com" alt="Guide Process" className="w-full rounded-lg shadow-md"/>
-            <Link href="/apply" className="mt-8 inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-xl hover:bg-blue-700 transition-all">Get Started Today</Link>
-          </div>
+          <img src="/images/guy-on-laptop.jpg" alt="Guide Process" className="w-full rounded-lg shadow-md md:w-1/2"/>
+        </div>
+
+        {/* CTA Button Centered */}
+        <div className="flex justify-center mt-12">
+          <QuoteDialog>
+            <Button className="bg-blue-600 text-white text-2xl font-semibold py-6 px-12 rounded-xl shadow-lg hover:bg-blue-700 transform hover:scale-105 transition-all">
+              Get Started Today
+            </Button>
+          </QuoteDialog>
         </div>
       </section>
 
       {/* Section 3: Ready to Get Started with a Big Apply Button */}
-      <section className="py-16 bg-blue-600 text-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-gray-200 text-lg mb-8">Apply now and get your website built by professionals for a starting price of £399.</p>
-          <a href="/apply" className="mt-8 inline-block bg-white text-blue-600 py-4 px-12 rounded-lg text-2xl font-semibold hover:bg-gray-100 transition-all">Apply Now</a>
+      <section className="py-20 bg-gradient-to-r from-blue-700 to-blue-500 text-white text-center">
+        <div className="container mx-auto">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Your Professional Website Starts Here</h2>
+          <p className="text-gray-200 text-lg max-w-2xl mx-auto leading-relaxed">
+            Take the first step towards a stunning, high-performance website that sets your business apart.  
+            <br/>
+            Apply today, and our team will review your application within <span className="font-semibold">24-48 hours</span>.
+            <br/>
+            If you&apos;re approved, we&apos;ll match you with a Senior Developer to bring your vision to life.
+          </p>
+          <div className="text-center mt-10">
+            <QuoteDialog>
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-2xl font-semibold py-6 px-14 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                Apply Now
+              </Button>
+            </QuoteDialog>
+          </div>
         </div>
       </section>
+
     </div>
   );
 }
