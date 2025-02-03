@@ -77,7 +77,7 @@ export default function QuoteDialog({ children }: { children: React.ReactNode })
 
       if (response.ok) {
         // After successful form submission, redirect to the success page
-        router.push('/success'); // Navigate to the success page (assuming it's at /success)
+        router.push('/landing-page/completed'); // Navigate to the success page (assuming it's at /success)
       } else {
         setErrors("Something went wrong. Please try again.");
       }

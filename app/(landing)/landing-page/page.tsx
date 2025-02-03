@@ -141,7 +141,7 @@ export default function LandingPage() {
 
             {/* Text on the Right */}
             <motion.div
-              className="space-y-4 md:space-y-6"
+              className="space-y-4 md:space-y-6 flex flex-col items-center" // Ensure content is centered
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -186,13 +186,21 @@ export default function LandingPage() {
               >
                 That’s where we come in. We’ve helped thousands of business owners get a professional website—without breaking the bank. With our affordable solutions, you can have a stunning website for your business starting at just £399.
               </motion.p>
-              <QuoteDialog>
-                <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 text-lg md:text-xl py-4 md:py-6 px-8 md:px-10 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105 text-center">
-                  Apply In 2 Minutes
-                </Button>
-              </QuoteDialog>
+              
+              {/* Center the button */}
+              <div className="w-full flex justify-center">
+                <QuoteDialog>
+                  <Button
+                    size="lg"
+                    className="bg-blue-600 text-white hover:bg-blue-700 text-lg md:text-xl py-4 md:py-6 px-8 md:px-10 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                  >
+                    Apply In 2 Minutes
+                  </Button>
+                </QuoteDialog>
+              </div>
             </motion.div>
           </div>
+
 
           {/* Stats Grid */}
           <motion.div
