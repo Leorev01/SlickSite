@@ -40,7 +40,7 @@ export default function LandingPage() {
           alt="Trustpilot Logo"
           width={100}
           height={100}
-          className="mx-auto mb-5 transition duration-300 cursor-pointer"
+          className="mx-auto mb-5"
         />
         <motion.h1
           className="text-3xl md:text-5xl font-bold mb-4"
