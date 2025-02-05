@@ -68,7 +68,7 @@ export default function LandingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Get A Professional Website from <span className="text-yellow-300">Just £399</span>
+          Get A Professional Website for <span className="text-yellow-300">Free</span>
           <br className="hidden md:block" /> And JumpStart Your Business
         </motion.h1>
         <motion.p
@@ -77,7 +77,7 @@ export default function LandingPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          Affordable, fast, and tailored to your business needs. Let’s build your dream website today!
+          Affordable, fast, and tailored to your business needs. Let’s build your dream website today—completely free!
         </motion.p>
         <QuoteDialog>
           <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg md:text-xl py-4 md:py-6 px-8 md:px-10 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
@@ -225,7 +225,7 @@ export default function LandingPage() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2, duration: 0.8 }}
               >
-                That’s where we come in. We’ve helped thousands of business owners get a professional website—without breaking the bank. With our affordable solutions, you can have a stunning website for your business starting at just £399.
+                That’s where we come in. We’ve helped thousands of business owners get a professional website—without breaking the bank. With our free solutions, you can have a stunning website for your business at no cost.
               </motion.p>
               
               {/* Center the button */}
@@ -253,7 +253,7 @@ export default function LandingPage() {
             {[
               { title: 'Customer Satisfaction', value: '100%' },
               { title: 'Average Agency Cost', value: '£3,698' },
-              { title: 'Our Starting Price', value: '£399' },
+              { title: 'Our Starting Price', value: 'Free' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.title}
@@ -326,7 +326,7 @@ export default function LandingPage() {
               <Button
                 className="bg-white text-blue-600 hover:bg-gray-100 text-sm md:text-lg lg:text-xl py-8 px-4 md:px-10 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105 mt-8 whitespace-normal text-center"
               >
-                Apply to Get Your Website Built by Professionals — From Just £399!
+                Apply to Get Your Free Website Built by Professionals!
               </Button>
             </QuoteDialog>
           </motion.div>
@@ -426,7 +426,7 @@ export default function LandingPage() {
             <Button
               className="bg-blue-600 text-white hover:bg-blue-700 text-sm md:text-lg lg:text-xl py-8 px-4 md:px-10 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105 mt-8 whitespace-normal text-center"
             >
-              Apply to Get Your Website Built by Professionals — From Just £399!
+              Apply to Get Your Free Website Built by Professionals!
             </Button>
           </QuoteDialog>
         </div>
@@ -560,7 +560,7 @@ export default function LandingPage() {
               Why We Do This
             </h2>
             <p className="text-gray-600 text-md md:text-lg mb-4">
-              Unlike many agencies, we charge a <strong>minimum of £399</strong> for professional, high-quality websites. Here’s why:
+              Unlike many agencies, we offer <strong>completely free websites</strong> for professional, high-quality websites. Here’s why:
             </p>
             <p className="text-gray-600 text-md md:text-lg mb-4">
               This is our way of ensuring that your investment leads to measurable results. Our goal is to build long-term relationships with businesses, so as your company grows, we can continue providing you with top-tier digital solutions.
@@ -589,7 +589,7 @@ export default function LandingPage() {
           <div className="md:w-1/2 space-y-6">
             <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-800">Sam S.</h3>
-              <p className="text-gray-600 mt-2">&quot;I was waiting for the catch. I still can&apos;t believe I got an incredible website for such a good price.&quot;</p>
+              <p className="text-gray-600 mt-2">&quot;I was waiting for the catch. I still can&apos;t believe I got an incredible website for free!&quot;</p>
               <p className="text-yellow-500 mt-2">★★★★★</p>
             </div>
 
