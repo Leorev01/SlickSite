@@ -1,33 +1,52 @@
 'use client';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight } from 'lucide-react'; // Import arrow icons
-import QuoteDialog from '../components/QuoteDialog';
-import Link from 'next/link';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import dynamic from 'next/dynamic'; // For dynamic imports
+
+// Dynamically import QuoteDialog to reduce initial bundle size
+const QuoteDialog = dynamic(() => import('../components/QuoteDialog'), {
+  ssr: false,
+});
 
 export default function LandingPage() {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const scrollToNext = () => {
     if (carouselRef.current) {
       const { scrollLeft, clientWidth } = carouselRef.current;
+      const newScrollLeft = scrollLeft + clientWidth;
       carouselRef.current.scrollTo({
-        left: scrollLeft + clientWidth,
+        left: newScrollLeft,
         behavior: 'smooth',
       });
+      setCurrentSlide((prev) => (prev + 1) % 6); // 6 is the number of slides
     }
   };
 
   const scrollToPrev = () => {
     if (carouselRef.current) {
       const { scrollLeft, clientWidth } = carouselRef.current;
+      const newScrollLeft = scrollLeft - clientWidth;
       carouselRef.current.scrollTo({
-        left: scrollLeft - clientWidth,
+        left: newScrollLeft,
         behavior: 'smooth',
       });
+      setCurrentSlide((prev) => (prev - 1 + 6) % 6); // 6 is the number of slides
+    }
+  };
+
+  const goToSlide = (index: number) => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollTo({
+        left: index * carouselRef.current.clientWidth,
+        behavior: 'smooth',
+      });
+      setCurrentSlide(index);
     }
   };
 
@@ -41,6 +60,7 @@ export default function LandingPage() {
           width={100}
           height={100}
           className="mx-auto mb-5"
+          loading="lazy" // Lazy load non-critical image
         />
         <motion.h1
           className="text-3xl md:text-5xl font-bold mb-4"
@@ -68,12 +88,12 @@ export default function LandingPage() {
 
       {/* Carousel Section */}
       <section className="py-10 md:py-20 px-4 md:px-5 bg-gray-50 relative z-20">
-        {/* Carousel Container */}
         <div className="relative w-full max-w-6xl mx-auto -mt-32 md:-mt-72">
           {/* Left Arrow */}
           <button
             onClick={scrollToPrev}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white/90 p-2 md:p-3 rounded-full shadow-lg z-10"
+            aria-label="Previous Slide"
           >
             <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
           </button>
@@ -100,10 +120,13 @@ export default function LandingPage() {
               >
                 {/* Image Container */}
                 <div className="h-[20rem] md:h-[35rem] overflow-hidden relative">
-                  <img
+                  <Image
                     src={image}
                     alt={`Project ${index + 1}`}
+                    width={1200}
+                    height={800}
                     className="w-full h-full object-cover object-top rounded-lg md:rounded-2xl"
+                    loading="lazy" // Lazy load images
                   />
                 </div>
               </motion.div>
@@ -114,9 +137,24 @@ export default function LandingPage() {
           <button
             onClick={scrollToNext}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white/90 p-2 md:p-3 rounded-full shadow-lg z-10"
+            aria-label="Next Slide"
           >
             <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
           </button>
+        </div>
+
+        {/* Pagination Dots */}
+        <div className="flex justify-center mt-4 space-x-2">
+          {[0, 1, 2, 3, 4, 5].map((index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full ${
+                currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
@@ -132,16 +170,19 @@ export default function LandingPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <img
+              <Image
                 src="/images/computer.jpg"
                 alt="Professional Website"
+                width={800}
+                height={600}
                 className="w-full h-full object-cover"
+                loading="lazy" // Lazy load image
               />
             </motion.div>
 
             {/* Text on the Right */}
             <motion.div
-              className="space-y-4 md:space-y-6 flex flex-col items-center" // Ensure content is centered
+              className="space-y-4 md:space-y-6 flex flex-col items-center"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -449,21 +490,64 @@ export default function LandingPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-white">Take a Look at Some of Our Work</h2>
           <p className="text-white mt-2">Explore our success stories and see full-size examples of websites we&apos;ve built for businesses like yours.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-6 md:mt-8">
-            <Link href='/landing-page/projects' className="group bg-white shadow-lg rounded-lg overflow-hidden">
-              <img src="/images/projects/sjdroofing.png" alt="SJD Roofing" className="w-full h-48 md:h-64 object-cover object-top" />
-              <div className="p-4 md:p-6">
-                <h3 className="text-xl font-semibold">SJD Roofing</h3>
-                <p className="text-gray-600">See full-size example websites</p>
-              </div>
-            </Link>
-            <Link href='/landing-page/projects' className="group bg-white shadow-lg rounded-lg overflow-hidden">
-              <img src="/images/projects/travelblog.png" alt="Travel Crush" className="w-full h-48 md:h-64 object-cover object-top" />
-              <div className="p-4 md:p-6">
-                <h3 className="text-xl font-semibold">Travel Crush</h3>
-                <p className="text-gray-600">See full-size example websites</p>
-              </div>
-            </Link>
-          </div>
+          <motion.div
+            className="group bg-white shadow-lg rounded-lg overflow-hidden"
+            whileHover={{ scale: 1.05 }} // Subtle scale effect on hover
+            transition={{ duration: 0.3 }} // Scale transition duration
+          >
+            <motion.div
+              className="w-full h-48 md:h-64 overflow-hidden"
+              style={{
+                position: 'relative',
+              }}
+            >
+              <motion.img
+                src="/images/projects/sjdroofing.png"
+                alt="SJD Roofing Website"
+                className="w-full h-full object-cover transition-all"
+                loading="lazy"
+                initial={{ objectPosition: 'top' }}
+                whileHover={{
+                  objectPosition: 'bottom',
+                }}
+                style={{ transitionDuration: '2s' }} // <-- Fix: Force transition duration
+              />
+            </motion.div>
+            <div className="p-4 md:p-6">
+              <h3 className="text-xl font-semibold">SJD Roofing</h3>
+              <p className="text-gray-600">Roofing Company</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="group bg-white shadow-lg rounded-lg overflow-hidden"
+            whileHover={{ scale: 1.05 }} // Subtle scale effect on hover
+            transition={{ duration: 0.3 }} // Scale transition duration
+          >
+            <motion.div
+              className="w-full h-48 md:h-64 overflow-hidden"
+              style={{
+                position: 'relative',
+              }}
+            >
+              <motion.img
+                src="/images/projects/travelblog.png"
+                alt="Travel Blog Website"
+                className="w-full h-full object-cover transition-all"
+                loading="lazy"
+                initial={{ objectPosition: 'top' }}
+                whileHover={{
+                  objectPosition: 'bottom',
+                }}
+                style={{ transitionDuration: '2s' }} // <-- Fix: Force transition duration
+              />
+            </motion.div>
+            <div className="p-4 md:p-6">
+              <h3 className="text-xl font-semibold">Travel Crush</h3>
+              <p className="text-gray-600">Travel Blog Website</p>
+            </div>
+          </motion.div>
+        </div>
         </div>
       </section>
 
