@@ -23,6 +23,13 @@ export default function QuoteDialog({ children }: { children: React.ReactNode })
     hosting: '',
   });
 
+/*************  ✨ Codeium Command ⭐  *************/
+  /**
+   * Handles input change event in the quote form by updating the form data
+   * and clearing any existing error messages.
+   * @param e React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+   */
+/******  cc323aed-35b6-4639-ae21-2df795052292  *******/
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setErrors(null); // Clear error when user types
@@ -77,7 +84,7 @@ export default function QuoteDialog({ children }: { children: React.ReactNode })
 
       if (response.ok) {
         // After successful form submission, redirect to the success page
-        router.push('/landing-page/completed'); // Navigate to the success page (assuming it's at /success)
+        router.push('/landing-page/thank-you'); // Navigate to the success page (assuming it's at /success)
       } else {
         setErrors("Something went wrong. Please try again.");
       }
