@@ -128,7 +128,7 @@ export default function ThankYouPage() {
             ⭐⭐⭐⭐⭐ &quot;Working with this team was amazing! They delivered a fantastic website on time and on budget.&quot;
           </motion.p>
           <motion.p className="text-lg mb-6">
-            - Happy Client
+            - Hans B
           </motion.p>
         </motion.div>
 
