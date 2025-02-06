@@ -589,13 +589,13 @@ export default function LandingPage() {
           <div className="md:w-1/2 space-y-6">
             <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-800">Sam S.</h3>
-              <p className="text-gray-600 mt-2">&quot;I was waiting for the catch. I still can&apos;t believe I got an incredible website for free!&quot;</p>
+              <p className="text-gray-600 mt-2">&quot;I kept thinking there had to be a catch—but there wasn&apos;t! I still can&apos;t believe I got such an amazing website at no cost!&quot;</p>
               <p className="text-yellow-500 mt-2">★★★★★</p>
             </div>
 
             <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-800">Ade N.</h3>
-              <p className="text-gray-600 mt-2">&quot;It was a fantastic experience. I&apos;m not very tech-savvy, and the thought of building a website felt overwhelming. They guided me through every step with ease.&quot;</p>
+              <p className="text-gray-600 mt-2">&quot;The whole process was smooth and stress-free. I&apos;m not very tech-savvy, and building a website seemed daunting, but they guided me every step of the way!&quot;</p>
               <p className="text-yellow-500 mt-2">★★★★★</p>
             </div>
           </div>

@@ -134,7 +134,7 @@ export default function ThankYouPage() {
 
         {/* Button to Return Home */}
         <Link
-          href="/"
+          href="/landing-page"
           className="inline-block bg-blue-600 text-white hover:bg-blue-700 text-lg md:text-xl py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
         >
           Go Back to Home
