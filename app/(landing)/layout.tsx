@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Slick Site",
-  description: "Best website builder for UK business owners",
+  description: "Top Rated web development for UK business owners",
 };
 
 export default function RootLayout({
