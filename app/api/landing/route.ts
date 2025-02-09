@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
       Phone: ${phone}
       Current Website: ${currentWebsite}
       Website Description: ${websiteDescription}
-      Hosting: ${hosting ? 'Yes' : 'No'}
+      Hosting: ${hosting === 'Yes' ? 'Yes' : 'No'}
     `,
   };
 
